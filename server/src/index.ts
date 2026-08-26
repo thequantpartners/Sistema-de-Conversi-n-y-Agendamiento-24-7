@@ -101,14 +101,47 @@ app.post("/webhook/booking", async (req: Request, res: Response) => {
     const payload = req.body;
     console.log("[Webhook] Payload recibido:", JSON.stringify(payload, null, 2));
 
-    // Normalizar datos
+    // Normalizar datos de Cal.com y Webhooks
     const bookingData: BookingPayload = {
-      leadName: payload.leadName || payload.data?.contact?.name || payload.bookingData?.name || "Prospecto",
-      leadPhone: payload.leadPhone || payload.data?.contact?.phone || payload.bookingData?.phone || null,
-      leadEmail: payload.leadEmail || payload.data?.contact?.email || payload.bookingData?.email || null,
-      bookingDate: payload.bookingDate || payload.bookingData?.date || null,
-      bookingTime: payload.bookingTime || payload.bookingData?.time || null,
-      meetingLink: payload.meetingLink || payload.bookingData?.meetingUrl || "https://cal.com/the-quant-partners/demo-qss",
+      leadName:
+        payload.leadName ||
+        payload.data?.contact?.name ||
+        payload.bookingData?.name ||
+        payload.bookingData?.attendeeName ||
+        payload.bookingData?.responses?.name ||
+        "Prospecto",
+      leadPhone:
+        payload.leadPhone ||
+        payload.data?.contact?.phone ||
+        payload.bookingData?.phone ||
+        payload.bookingData?.attendeePhoneNumber ||
+        payload.bookingData?.responses?.attendeePhoneNumber?.value ||
+        payload.bookingData?.responses?.attendeePhoneNumber ||
+        payload.bookingData?.responses?.phone ||
+        payload.bookingData?.attendees?.[0]?.phoneNumber ||
+        null,
+      leadEmail:
+        payload.leadEmail ||
+        payload.data?.contact?.email ||
+        payload.bookingData?.email ||
+        payload.bookingData?.attendeeEmail ||
+        payload.bookingData?.responses?.email ||
+        payload.bookingData?.attendees?.[0]?.email ||
+        null,
+      bookingDate:
+        payload.bookingDate ||
+        payload.bookingData?.date ||
+        payload.bookingData?.startTime ||
+        null,
+      bookingTime:
+        payload.bookingTime ||
+        payload.bookingData?.time ||
+        null,
+      meetingLink:
+        payload.meetingLink ||
+        payload.bookingData?.meetingUrl ||
+        payload.bookingData?.location ||
+        "https://cal.com/the-quant-partners/demo-qss",
       answers: payload.answers || payload.data?.answers || {},
     };
 
