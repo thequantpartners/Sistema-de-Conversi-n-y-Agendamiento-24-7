@@ -22,12 +22,10 @@ export const QualificationStep: React.FC<QualificationStepProps> = ({
   const questions = config.qualification.questions;
   const currentQuestion: QualificationQuestion = questions[currentStepIndex];
 
-  // Set the selected option when clicking an option card
   const handleSelectOption = (optionId: string) => {
     setSelectedOptionId(optionId);
   };
 
-  // Explicit confirmation when clicking "Continuar"
   const handleContinue = () => {
     if (!selectedOptionId) return;
 
@@ -47,7 +45,6 @@ export const QualificationStep: React.FC<QualificationStepProps> = ({
 
     if (currentStepIndex + 1 < questions.length) {
       setCurrentStepIndex((prev) => prev + 1);
-      // Pre-select if this question was already answered previously
       const nextQuestion = questions[currentStepIndex + 1];
       setSelectedOptionId(answers[nextQuestion.id] || null);
     } else {
@@ -71,13 +68,14 @@ export const QualificationStep: React.FC<QualificationStepProps> = ({
     <div className="rounded-3xl border border-zinc-800 bg-zinc-950 p-6 sm:p-10 shadow-2xl shadow-black/50">
       {/* Progress Bar & Back Navigation */}
       <div className="mb-8">
-        <div className="flex items-center justify-between text-xs font-mono text-zinc-400 mb-2">
+        <div className="flex items-center justify-between text-xs font-mono text-zinc-300 mb-2">
           <div className="flex items-center gap-2">
             {currentStepIndex > 0 && (
               <button
                 type="button"
                 onClick={handlePrevious}
-                className="inline-flex items-center gap-1 text-zinc-400 hover:text-white transition-colors mr-2 pr-2 border-r border-zinc-800"
+                aria-label="Volver al paso anterior"
+                className="inline-flex items-center gap-1 text-zinc-300 hover:text-white transition-colors mr-2 pr-2 border-r border-zinc-800"
               >
                 <ArrowLeft className="h-3.5 w-3.5" />
                 <span>Paso anterior</span>
@@ -107,7 +105,7 @@ export const QualificationStep: React.FC<QualificationStepProps> = ({
           {currentQuestion.title}
         </h3>
         {currentQuestion.subtitle && (
-          <p className="text-xs sm:text-sm text-zinc-400">
+          <p className="text-xs sm:text-sm text-zinc-300">
             {currentQuestion.subtitle}
           </p>
         )}
@@ -125,27 +123,27 @@ export const QualificationStep: React.FC<QualificationStepProps> = ({
               onClick={() => handleSelectOption(option.id)}
               className={`group relative flex w-full items-start justify-between rounded-xl border p-4 sm:p-5 text-left transition-all active:scale-[0.99] ${
                 isSelected
-                  ? "border-indigo-500 bg-indigo-950/40 shadow-md shadow-indigo-950"
-                  : "border-zinc-800/90 bg-zinc-900/40 hover:border-zinc-700 hover:bg-zinc-900/80"
+                  ? "border-indigo-500 bg-indigo-950/50 shadow-md shadow-indigo-950"
+                  : "border-zinc-800/90 bg-zinc-900/50 hover:border-zinc-700 hover:bg-zinc-900/90"
               }`}
             >
               <div className="pr-4">
                 <div className="flex items-center gap-2 mb-1">
                   <span
                     className={`text-sm sm:text-base font-semibold ${
-                      isSelected ? "text-white" : "text-zinc-200"
+                      isSelected ? "text-white" : "text-zinc-100"
                     }`}
                   >
                     {option.label}
                   </span>
                   {option.badge && (
-                    <span className="rounded-full bg-indigo-500/20 border border-indigo-500/40 px-2 py-0.5 text-[10px] font-mono font-medium text-indigo-300">
+                    <span className="rounded-full bg-indigo-500/30 border border-indigo-400/50 px-2 py-0.5 text-[10px] font-mono font-medium text-indigo-200">
                       {option.badge}
                     </span>
                   )}
                 </div>
                 {option.description && (
-                  <p className="text-xs text-zinc-400">{option.description}</p>
+                  <p className="text-xs text-zinc-300">{option.description}</p>
                 )}
               </div>
 
@@ -153,7 +151,7 @@ export const QualificationStep: React.FC<QualificationStepProps> = ({
                 className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-full border transition-all mt-0.5 ${
                   isSelected
                     ? "border-indigo-500 bg-indigo-600 text-white"
-                    : "border-zinc-700 bg-zinc-950 group-hover:border-zinc-500"
+                    : "border-zinc-600 bg-zinc-950 group-hover:border-zinc-400"
                 }`}
               >
                 {isSelected && <Check className="h-3 w-3 stroke-[3]" />}
@@ -169,10 +167,10 @@ export const QualificationStep: React.FC<QualificationStepProps> = ({
           type="button"
           disabled={!selectedOptionId}
           onClick={handleContinue}
-          className={`w-full inline-flex items-center justify-center gap-2 rounded-xl py-3.5 px-6 font-semibold text-sm transition-all shadow-lg active:scale-[0.99] ${
+          className={`w-full inline-flex items-center justify-center gap-2 rounded-xl py-3.5 px-6 font-semibold text-sm transition-all shadow-lg active:scale-[0.99] focus:outline-none focus:ring-2 focus:ring-indigo-400 ${
             selectedOptionId
               ? "bg-indigo-600 text-white hover:bg-indigo-500 shadow-indigo-950 cursor-pointer"
-              : "bg-zinc-900 text-zinc-600 border border-zinc-800/80 cursor-not-allowed"
+              : "bg-zinc-900 text-zinc-300 border border-zinc-800/80 cursor-not-allowed opacity-75"
           }`}
         >
           <span>
@@ -185,7 +183,7 @@ export const QualificationStep: React.FC<QualificationStepProps> = ({
       </div>
 
       {/* Footer Info */}
-      <div className="flex items-center justify-between border-t border-zinc-800/80 mt-6 pt-4 text-xs font-mono text-zinc-500">
+      <div className="flex items-center justify-between border-t border-zinc-800/80 mt-6 pt-4 text-xs font-mono text-zinc-300">
         <span>🔒 Selección obligatoria para avanzar</span>
         <span>Acceso a agenda en vivo</span>
       </div>

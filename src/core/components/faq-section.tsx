@@ -41,12 +41,13 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ config }) => {
                 <button
                   type="button"
                   onClick={() => toggleItem(idx)}
-                  className="flex w-full items-center justify-between p-5 text-left text-sm sm:text-base font-semibold text-zinc-100 hover:text-white transition-colors"
+                  aria-expanded={isOpen}
+                  className="flex w-full items-center justify-between p-5 text-left text-sm sm:text-base font-semibold text-white hover:text-indigo-300 transition-colors"
                 >
                   <span className="pr-4">{item.question}</span>
                   <div
                     className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-zinc-900 border border-zinc-800 transition-transform duration-200 ${
-                      isOpen ? "rotate-180 text-indigo-400" : "text-zinc-400"
+                      isOpen ? "rotate-180 text-indigo-400" : "text-zinc-300"
                     }`}
                   >
                     <ChevronDown className="h-4 w-4" />
@@ -54,7 +55,7 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ config }) => {
                 </button>
 
                 {isOpen && (
-                  <div className="border-t border-zinc-800/80 px-5 pt-3 pb-5 text-xs sm:text-sm text-zinc-300 leading-relaxed bg-zinc-900/20">
+                  <div className="border-t border-zinc-800/80 px-5 pt-3 pb-5 text-xs sm:text-sm text-zinc-200 leading-relaxed bg-zinc-900/40">
                     {item.answer}
                   </div>
                 )}

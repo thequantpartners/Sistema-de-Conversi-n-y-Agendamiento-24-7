@@ -27,7 +27,7 @@ export const HowItWorksSection: React.FC<HowItWorksSectionProps> = ({
         <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-white mb-3">
           {config.howItWorks.title}
         </h2>
-        <p className="text-zinc-400 text-sm sm:text-base mb-12 max-w-2xl">
+        <p className="text-zinc-300 text-sm sm:text-base mb-12 max-w-2xl">
           {config.howItWorks.subtitle}
         </p>
 
@@ -36,7 +36,7 @@ export const HowItWorksSection: React.FC<HowItWorksSectionProps> = ({
           {config.howItWorks.steps.map((step, idx) => (
             <div
               key={idx}
-              className="relative flex flex-col justify-between rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6 transition-all hover:border-zinc-700 hover:bg-zinc-900/70"
+              className="relative flex flex-col justify-between rounded-2xl border border-zinc-800 bg-zinc-900/50 p-6 transition-all hover:border-zinc-700 hover:bg-zinc-900/80"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
@@ -47,7 +47,7 @@ export const HowItWorksSection: React.FC<HowItWorksSectionProps> = ({
                       </span>
                     )}
                   </div>
-                  <span className="font-mono text-2xl font-bold text-zinc-700">
+                  <span className="font-mono text-2xl font-bold text-zinc-500">
                     0{step.number}
                   </span>
                 </div>
@@ -55,7 +55,7 @@ export const HowItWorksSection: React.FC<HowItWorksSectionProps> = ({
                 <h3 className="font-mono text-xs uppercase tracking-wider text-indigo-300 font-semibold mb-2">
                   {step.title}
                 </h3>
-                <p className="text-sm text-zinc-300 leading-relaxed">
+                <p className="text-sm text-zinc-200 leading-relaxed">
                   {step.description}
                 </p>
               </div>
@@ -67,7 +67,7 @@ export const HowItWorksSection: React.FC<HowItWorksSectionProps> = ({
         <div className="mt-14 text-center">
           <a
             href="#numeros"
-            className="inline-flex items-center text-xs font-mono text-zinc-400 hover:text-indigo-400 transition-colors"
+            className="inline-flex items-center text-xs font-mono text-zinc-300 hover:text-indigo-400 transition-colors underline-offset-4 hover:underline"
           >
             {config.howItWorks.bridgeText}
           </a>

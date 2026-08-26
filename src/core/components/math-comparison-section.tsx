@@ -20,7 +20,7 @@ export const MathComparisonSection: React.FC<MathComparisonSectionProps> = ({
         <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-white mb-3">
           {config.mathComparison.title}
         </h2>
-        <p className="text-zinc-400 text-sm sm:text-base mb-10 max-w-2xl">
+        <p className="text-zinc-300 text-sm sm:text-base mb-10 max-w-2xl">
           {config.mathComparison.subtitle}
         </p>
 
@@ -36,15 +36,15 @@ export const MathComparisonSection: React.FC<MathComparisonSectionProps> = ({
                   {item.value}
                 </span>
                 {item.unit && (
-                  <span className="text-xs text-zinc-400 font-mono">
+                  <span className="text-xs text-zinc-300 font-mono">
                     {item.unit}
                   </span>
                 )}
               </div>
-              <p className="text-xs sm:text-sm text-zinc-300 mb-4 leading-relaxed">
+              <p className="text-xs sm:text-sm text-zinc-200 mb-4 leading-relaxed">
                 {item.label}
               </p>
-              <div className="inline-block rounded-full bg-indigo-950/70 border border-indigo-500/30 px-2.5 py-0.5 text-[10px] font-mono text-indigo-300">
+              <div className="inline-block rounded-full bg-indigo-950/80 border border-indigo-500/40 px-2.5 py-0.5 text-[10px] font-mono text-indigo-200">
                 {item.tag}
               </div>
             </div>
@@ -53,11 +53,11 @@ export const MathComparisonSection: React.FC<MathComparisonSectionProps> = ({
 
         {/* Breakdown Table */}
         <div className="rounded-2xl border border-zinc-800 bg-zinc-950 overflow-hidden">
-          <div className="border-b border-zinc-800/80 px-6 py-4 bg-zinc-900/60 flex items-center justify-between">
-            <span className="font-mono text-xs text-zinc-300 uppercase tracking-wider font-semibold">
+          <div className="border-b border-zinc-800/80 px-6 py-4 bg-zinc-900/80 flex items-center justify-between">
+            <span className="font-mono text-xs text-zinc-200 uppercase tracking-wider font-semibold">
               Transparencia de Costes y Servicio
             </span>
-            <span className="text-[11px] font-mono text-emerald-400">
+            <span className="text-xs font-mono text-emerald-400">
               ✓ Cero sorpresas
             </span>
           </div>
@@ -71,7 +71,7 @@ export const MathComparisonSection: React.FC<MathComparisonSectionProps> = ({
                 <span className="font-mono text-xs font-semibold text-indigo-300">
                   {row.concept}
                 </span>
-                <span className="sm:col-span-2 text-zinc-300 text-xs sm:text-sm">
+                <span className="sm:col-span-2 text-zinc-200 text-xs sm:text-sm">
                   {row.detail}
                 </span>
               </div>
@@ -83,7 +83,7 @@ export const MathComparisonSection: React.FC<MathComparisonSectionProps> = ({
         <div className="mt-14 text-center">
           <a
             href="#que-no-es"
-            className="inline-flex items-center text-xs font-mono text-zinc-400 hover:text-indigo-400 transition-colors"
+            className="inline-flex items-center text-xs font-mono text-zinc-300 hover:text-indigo-400 transition-colors underline-offset-4 hover:underline"
           >
             {config.mathComparison.bridgeText}
           </a>
