@@ -44,8 +44,8 @@ export const quantPartnersConfig: ProjectConfig = {
       },
       {
         number: "3",
-        title: "CONFIRMACIÓN Y NOTIFICACIÓN POR WHATSAPP",
-        description: "En segundos, el prospecto recibe los detalles de acceso y tú recibes una notificación en tu WhatsApp con todas sus respuestas de filtro para preparar la llamada.",
+        title: "CONFIRMACIÓN POR WHATSAPP Y SINCRONIZACIÓN CRM",
+        description: "En segundos, el prospecto recibe los datos de acceso y tú una alerta por WhatsApp con sus respuestas de filtro, registrando automáticamente el lead en tu CRM (HubSpot, Odoo o Zoho CRM).",
       },
     ],
     bridgeText: "Revisa la comparativa de costes y modelo operativo ↓",
@@ -83,7 +83,7 @@ export const quantPartnersConfig: ProjectConfig = {
       },
       {
         concept: "Propiedad de Datos",
-        detail: "La base de datos de leads, tu calendario y las automatizaciones quedan bajo tu control.",
+        detail: "La base de datos de leads, tu calendario, sincronización con tu CRM (HubSpot, Odoo, Zoho) y las automatizaciones quedan bajo tu control.",
       },
     ],
     bridgeText: "Alineación de expectativas: Lo que es y lo que no es este sistema ↓",
@@ -291,12 +291,16 @@ export const quantPartnersConfig: ProjectConfig = {
         answer: "No trabajamos con mensualidades de retención. Se realiza una implementación única de la infraestructura en tus plataformas. Tú mantienes la propiedad de tus accesos, calendarios y bases de datos.",
       },
       {
+        question: "¿Se conecta automáticamente con mi CRM actual?",
+        answer: "Sí. El sistema dispara webhooks en tiempo real compatibles con los CRM más utilizados del mercado peruano (HubSpot, Odoo y Zoho CRM) o Google Sheets. Toda la información del prospecto, sus respuestas de filtro y la fecha agendada se sincronizan automáticamente en tu base de datos.",
+      },
+      {
         question: "¿Puedo adaptar las preguntas de filtro a los requisitos de mi nicho?",
         answer: "Sí. Las preguntas de cualificación se configuran con las variables clave de tu servicio (ej. presupuesto mínimo, modelo de negocio, plazo de contratación o rubro).",
       },
       {
         question: "¿Qué integraciones técnicas se requieren?",
-        answer: "Solo tu cuenta de calendario (Cal.com o Google Calendar) y el número de WhatsApp donde desees recibir las alertas con los datos de cada lead cualificado.",
+        answer: "Solo tu cuenta de calendario (Cal.com o Google Calendar), el número de WhatsApp para las alertas y las credenciales de tu CRM o Google Sheets si deseas sincronizar los leads en automático.",
       },
     ],
   },
