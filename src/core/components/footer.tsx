@@ -1,10 +1,19 @@
 "use client";
 
 import React, { useState } from "react";
+import dynamic from "next/dynamic";
 import { ProjectConfig } from "@/core/types/project";
-import { PrivacyModal } from "./legal/privacy-modal";
-import { TermsModal } from "./legal/terms-modal";
 import { ShieldCheck } from "lucide-react";
+
+const PrivacyModal = dynamic(
+  () => import("./legal/privacy-modal").then((mod) => mod.PrivacyModal),
+  { ssr: false }
+);
+
+const TermsModal = dynamic(
+  () => import("./legal/terms-modal").then((mod) => mod.TermsModal),
+  { ssr: false }
+);
 
 interface FooterProps {
   config: ProjectConfig;
