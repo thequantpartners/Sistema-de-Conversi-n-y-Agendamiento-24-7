@@ -16,7 +16,7 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ config }) => {
   };
 
   return (
-    <section id="faq" className="py-20 border-b border-zinc-800/60 bg-zinc-900/30">
+    <section id="faq" className="py-20 border-b border-zinc-800/60 bg-zinc-900/30 optimize-render">
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
         {/* Section Tag */}
         <div className="mb-4 inline-flex items-center gap-2 font-mono text-xs text-indigo-400 tracking-wider uppercase">

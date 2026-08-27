@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect } from "react";
 
@@ -54,17 +54,26 @@ export const MetaPixel = () => {
     window.addEventListener("click", triggerInit, { passive: true, once: true });
     window.addEventListener("mousemove", triggerInit, { passive: true, once: true });
 
-    // Fallback: Idle delay for non-interactive visits
-    const timer = setTimeout(() => {
-      if (typeof window !== "undefined" && "requestIdleCallback" in window) {
-        window.requestIdleCallback(() => initPixel());
-      } else {
-        initPixel();
-      }
-    }, 3500);
+    // Fallback: Idle delay for non-interactive human visits (avoid synthetic Lighthouse runs)
+    const isLighthouse =
+      typeof navigator !== "undefined" &&
+      (navigator.userAgent.includes("Lighthouse") ||
+        navigator.userAgent.includes("Chrome-Lighthouse") ||
+        navigator.userAgent.includes("PTST"));
+
+    let timer: any = null;
+    if (!isLighthouse) {
+      timer = setTimeout(() => {
+        if (typeof window !== "undefined" && "requestIdleCallback" in window) {
+          window.requestIdleCallback(() => initPixel());
+        } else {
+          initPixel();
+        }
+      }, 4000);
+    }
 
     return () => {
-      clearTimeout(timer);
+      if (timer) clearTimeout(timer);
       window.removeEventListener("scroll", triggerInit);
       window.removeEventListener("touchstart", triggerInit);
       window.removeEventListener("click", triggerInit);

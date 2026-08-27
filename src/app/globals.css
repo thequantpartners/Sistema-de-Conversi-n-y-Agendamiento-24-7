@@ -32,3 +32,9 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #3f3f46;
 }
+
+/* Optimize Below-the-Fold rendering for PageSpeed 100 */
+.optimize-render {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 500px;
+}

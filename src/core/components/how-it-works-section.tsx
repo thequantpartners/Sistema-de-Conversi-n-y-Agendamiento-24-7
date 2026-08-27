@@ -16,7 +16,7 @@ export const HowItWorksSection: React.FC<HowItWorksSectionProps> = ({
   ];
 
   return (
-    <section id="como-funciona" className="py-20 border-b border-zinc-800/60 bg-zinc-950">
+    <section id="como-funciona" className="py-20 border-b border-zinc-800/60 bg-zinc-950 optimize-render">
       <div className="mx-auto max-w-4xl px-4 sm:px-6">
         {/* Section Tag */}
         <div className="mb-4 inline-flex items-center gap-2 font-mono text-xs text-indigo-400 tracking-wider uppercase">
