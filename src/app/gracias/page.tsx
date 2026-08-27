@@ -17,16 +17,28 @@ export default function GraciasPage() {
 
   return (
     <div className="min-h-screen bg-[#09090b] text-[#f4f4f5] font-sans selection:bg-indigo-500 selection:text-white flex flex-col justify-between">
-      {/* Meta Pixel Schedule Event Trigger Script stub */}
+      {/* Meta Pixel Schedule Event Trigger */}
       <script
         dangerouslySetInnerHTML={{
           __html: `
             if (typeof window !== 'undefined' && typeof window.fbq === 'function') {
-              window.fbq('track', 'Schedule');
+              window.fbq('track', 'Schedule', {
+                content_name: 'Sesion Estrategica Quant Partners',
+                status: 'confirmed'
+              });
             }
           `,
         }}
       />
+      <noscript>
+        <img
+          height="1"
+          width="1"
+          style={{ display: "none" }}
+          src="https://www.facebook.com/tr?id=1481108957086201&ev=Schedule&noscript=1"
+          alt=""
+        />
+      </noscript>
 
       {/* Top Header Bar */}
       <header className="w-full border-b border-zinc-800/80 bg-zinc-950/80 py-4 px-4 sm:px-6">
