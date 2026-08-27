@@ -18,19 +18,18 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://quantpartners.com"),
   title: {
-    default: "Quant Partners | Infraestructura de Conversión y Agendamiento 24/7",
+    default: "Quant Partners | Sistema de Conversión y Ventas 24/7 para WordPress",
     template: "%s | Quant Partners",
   },
   description:
-    "Infraestructura técnica para coaches y agencias B2B con tráfico activo: filtra a curiosos antes de tu agenda, sincroniza citas en vivo y confirma 24/7 vía WhatsApp.",
+    "Convierte tu WordPress en una máquina de ventas 24/7: filtra curiosos sin presupuesto, sincroniza tu agenda en vivo y confirma citas por WhatsApp y CRM en segundos.",
   keywords: [
-    "agendamiento 24/7",
-    "embudo de conversion",
-    "calificacion de prospectos",
-    "automatizacion whatsapp",
-    "sistema de agendamiento coaches",
-    "agendamiento agencias b2b",
-    "cal.com integracion",
+    "agendamiento 24/7 wordpress",
+    "sistema de ventas wordpress",
+    "embudo de conversion wordpress",
+    "calificacion de prospectos wordpress",
+    "automatizacion whatsapp crm",
+    "cal.com wordpress",
     "reducir no shows",
     "quant partners",
   ],
