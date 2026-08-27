@@ -1,10 +1,26 @@
 "use client";
 
 import React, { useState } from "react";
+import dynamic from "next/dynamic";
 import { ProjectConfig } from "@/core/types/project";
 import { QualificationStep } from "./qualification-step";
-import { CalendarStep } from "./calendar-step";
-import { DisqualifiedStep } from "./disqualified-step";
+
+const CalendarStep = dynamic(
+  () => import("./calendar-step").then((mod) => mod.CalendarStep),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="rounded-3xl border border-zinc-800 bg-zinc-950 p-8 text-center text-zinc-400">
+        Cargando calendario...
+      </div>
+    ),
+  }
+);
+
+const DisqualifiedStep = dynamic(
+  () => import("./disqualified-step").then((mod) => mod.DisqualifiedStep),
+  { ssr: false }
+);
 
 interface BookingFunnelProps {
   config: ProjectConfig;

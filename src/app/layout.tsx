@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const inter = Inter({
@@ -137,8 +138,20 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${inter.variable} dark`}>
       <head>
-        {/* Meta Pixel Base Code */}
+        <link rel="preconnect" href="https://connect.facebook.net" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://connect.facebook.net" />
+        {/* Schema.org JSON-LD */}
         <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
+      <body className="min-h-screen bg-[#09090b] text-[#f4f4f5] antialiased">
+        {children}
+        {/* Meta Pixel Base Code - Loaded asynchronously after interactive */}
+        <Script
+          id="meta-pixel"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               !function(f,b,e,v,n,t,s)
@@ -163,14 +176,6 @@ export default function RootLayout({
             alt=""
           />
         </noscript>
-        {/* Schema.org JSON-LD */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      </head>
-      <body className="min-h-screen bg-[#09090b] text-[#f4f4f5] antialiased">
-        {children}
       </body>
     </html>
   );
