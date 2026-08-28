@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { DemoStickyBar } from "@/core/components/demos/demo-sticky-bar";
 import { DemoFloatingWhatsApp } from "@/core/components/demos/demo-floating-whatsapp";
 import { DEMO_NICHES, getWhatsAppLink, PROMO_PRICE } from "@/core/data/portfolio-demos";
@@ -30,356 +31,288 @@ export default function DemoServiciosProfesionalesPage() {
   const [selectedCaseType, setSelectedCaseType] = useState("tributario");
 
   const caseMessages: Record<string, string> = {
-    tributario: "Hola, vi su landing page y necesito asesoría urgente en Defensa Tributaria y fiscalizaciones de SUNAT.",
-    corporativo: "Hola, vi su landing page y necesito asesoría en Contratos y Derecho Corporativo para mi empresa.",
-    laboral: "Hola, vi su landing page y necesito blindaje laboral y prevención de contingencias con colaboradores.",
-    marcas: "Hola, vi su landing page y deseo registrar y proteger mi marca en INDECOPI.",
+    tributario: "Hola Brian, vi su página y requiero asesoría estratégica en Defensa Tributaria y fiscalizaciones ante SUNAT.",
+    corporativo: "Hola Brian, vi su página y requiero asesoría en Contratos y Derecho Corporativo para mi empresa.",
+    laboral: "Hola Brian, vi su página y requiero blindaje laboral preventivo y resolución de contingencias.",
+    marcas: "Hola Brian, vi su página y deseo registrar y proteger mi marca y patentes en INDECOPI.",
   };
 
   const dynamicWaLink = getWhatsAppLink(caseMessages[selectedCaseType] || demoData.whatsAppMessage);
 
   return (
-    <div className="min-h-screen bg-[#06080F] text-slate-100 font-sans pb-36 relative overflow-x-hidden selection:bg-amber-400 selection:text-slate-950">
+    <div className="min-h-screen bg-[#070605] text-slate-100 font-sans pb-36 relative selection:bg-[#C5A880] selection:text-slate-950">
       
-      {/* 🌌 High-End Ambient Mesh & Warm Golden Auras */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1200px] h-[650px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-500/15 via-blue-900/15 to-transparent blur-[160px] pointer-events-none -z-10" />
-      <div className="absolute top-[40%] right-[-10%] w-[600px] h-[600px] bg-amber-600/10 blur-[180px] pointer-events-none -z-10" />
-      <div className="absolute bottom-[20%] left-[-10%] w-[600px] h-[600px] bg-indigo-700/10 blur-[180px] pointer-events-none -z-10" />
-
-      {/* Floating Capsule Demo Bar */}
-      <div className="py-2.5 px-4 bg-white/[0.02] border-b border-white/[0.06] backdrop-blur-xl text-center text-xs flex items-center justify-center gap-2">
-        <span className="px-2.5 py-0.5 rounded-full bg-amber-400/15 text-amber-300 font-bold border border-amber-400/30 text-[10px]">
+      {/* Top Demo Banner */}
+      <div className="py-2 px-4 bg-black/80 border-b border-white/[0.08] backdrop-blur-xl text-center text-xs flex flex-wrap items-center justify-center gap-2 relative z-50">
+        <span className="px-2.5 py-0.5 rounded-full bg-[#C5A880]/20 text-[#DFC39C] font-bold border border-[#C5A880]/40 text-[10px] uppercase tracking-wider">
           LANDING PAGE DEMO
         </span>
         <span className="text-slate-300">
-          Diseño Premium para <strong>Abogados, Contadores, Consultores y Agencias B2B</strong>
+          Diseño Editorial & Cinematográfico para <strong>Abogados, Firmas Legales y Consultoras de Prestigio</strong>
         </span>
       </div>
 
-      {/* Modern Floating Capsule Header */}
-      <header className="sticky top-4 z-40 max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between px-6 py-3.5 rounded-full bg-slate-950/70 border border-white/[0.08] backdrop-blur-2xl shadow-[0_10px_40px_rgba(0,0,0,0.5)]">
-          <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-amber-400 via-amber-500 to-yellow-300 flex items-center justify-center font-serif font-black text-slate-950 text-base shadow-[0_0_20px_rgba(245,158,11,0.3)]">
-              VJ
-            </div>
-            <div>
-              <span className="font-extrabold text-sm tracking-tight text-white block">
-                VALENZUELA & ASOCIADOS
-              </span>
-              <span className="text-[9px] font-mono text-amber-400/90 uppercase tracking-widest block font-semibold">
-                Firma Legal & Tributaria Corporativa
-              </span>
-            </div>
+      {/* 🏛️ CINEMATIC HERO SECTION (Replica Exacta del Diseño de Referencia) */}
+      <section className="relative min-h-[92vh] sm:min-h-screen flex flex-col justify-between overflow-hidden">
+        
+        {/* Background Image Layer */}
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src="/images/lawyer-hero.png"
+            alt="Brian Anderson - Legal Counsel"
+            fill
+            priority
+            className="object-cover object-center sm:object-top brightness-90"
+          />
+          {/* Subtle Ambient Gradients for Perfect Typographic Contrast */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#070605] via-black/30 to-black/60 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/20 to-black/60 pointer-events-none" />
+        </div>
+
+        {/* Minimalist Editorial Navigation */}
+        <header className="w-full px-6 sm:px-12 py-6 sm:py-8 flex items-center justify-between relative z-20">
+          {/* Brand Name */}
+          <div className="flex flex-col">
+            <span className="font-serif text-2xl sm:text-3xl font-medium tracking-tight text-white leading-none">
+              Brian Anderson
+            </span>
+            <span className="text-[9px] uppercase tracking-[0.25em] text-[#C5A880] font-sans mt-1">
+              Attorney & Legal Counsel
+            </span>
           </div>
 
-          <nav className="hidden lg:flex items-center gap-7 text-xs font-semibold uppercase tracking-wider text-slate-400">
-            <a href="#especialidades" className="hover:text-amber-300 transition-colors">Especialidades</a>
-            <a href="#resultados" className="hover:text-amber-300 transition-colors">Casos de Éxito</a>
-            <a href="#evaluacion" className="hover:text-amber-300 transition-colors">Evaluación Express</a>
+          {/* Center Nav Links (Desktop) */}
+          <nav className="hidden md:flex items-center gap-8 text-xs sm:text-sm font-light text-slate-300 tracking-wide">
+            <a href="#about" className="hover:text-white transition-colors">About</a>
+            <a href="#practice-areas" className="hover:text-white transition-colors">Practice Areas</a>
+            <a href="#case-studies" className="hover:text-white transition-colors">Case Studies</a>
+            <a href="#testimonials" className="hover:text-white transition-colors">Testimonials</a>
+            <a href="#contact" className="hover:text-white transition-colors">Contact</a>
           </nav>
 
+          {/* Right Action Button */}
           <a
             href={dynamicWaLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 sm:px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 shadow-[0_0_20px_rgba(245,158,11,0.3)] transition-all transform hover:scale-105"
+            className="px-4 sm:px-5 py-2 sm:py-2.5 rounded-sm text-xs sm:text-sm font-light text-slate-100 border border-white/30 hover:border-[#C5A880] hover:text-[#DFC39C] backdrop-blur-sm transition-all duration-300 flex items-center gap-2"
           >
-            Consulta Confidencial
+            <span>Request a Consultation</span>
+            <ArrowRight className="w-3.5 h-3.5" />
           </a>
-        </div>
-      </header>
+        </header>
 
-      {/* Hero Section (Atmospheric Fluid 60/40 Split) */}
-      <section className="pt-12 sm:pt-20 pb-16 px-4 sm:px-6 max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        {/* Hero Central / Bottom Grid Composition */}
+        <div className="w-full max-w-7xl mx-auto px-6 sm:px-12 py-8 sm:py-12 flex-1 flex flex-col justify-between relative z-20">
           
-          {/* Left Column */}
-          <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.03] border border-amber-500/30 backdrop-blur-xl text-amber-300 text-xs font-medium shadow-xl">
-              <ShieldCheck className="w-4 h-4 text-amber-400 shrink-0" />
-              <span>Blindaje Legal Corporativo con +15 Años de Trayectoria</span>
-            </div>
-
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1]">
-              Defensa Legal y Tributaria Estratégica para{" "}
-              <span className="bg-gradient-to-r from-amber-200 via-amber-400 to-yellow-500 bg-clip-text text-transparent drop-shadow-[0_0_35px_rgba(245,158,11,0.25)]">
-                Blindar tu Empresa.
-              </span>
-            </h1>
-
-            <p className="text-sm sm:text-lg text-slate-300 leading-relaxed max-w-xl mx-auto lg:mx-0">
-              Especialistas en fiscalizaciones de SUNAT, reorganización societaria y resolución de litigios comerciales complejos. Tu tranquilidad jurídica garantizada.
+          {/* Top-Right Editorial Value Statement */}
+          <div className="flex justify-end pt-4 sm:pt-0">
+            <p className="max-w-md text-xs sm:text-sm md:text-base font-light text-slate-200 leading-relaxed text-left sm:text-left backdrop-blur-[2px] p-2 sm:p-0">
+              Transforming complex legal challenges into clear strategies through experience, deep insight, and an unyielding commitment to achieving meaningful client outcomes.
             </p>
-
-            {/* CTAs & Social Proof */}
-            <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-              <a
-                href={dynamicWaLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full font-bold text-sm sm:text-base bg-emerald-400 hover:bg-emerald-300 text-slate-950 shadow-[0_0_30px_rgba(16,185,129,0.35)] transition-all transform hover:scale-105"
-              >
-                <MessageCircle className="w-5 h-5 fill-slate-950" />
-                <span>Agendar Asesoría por WhatsApp</span>
-              </a>
-
-              <a
-                href="#especialidades"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full font-semibold text-xs sm:text-sm text-slate-300 hover:text-white bg-white/[0.03] hover:bg-white/[0.07] border border-white/10 backdrop-blur-xl transition"
-              >
-                <span>Explorar Áreas</span>
-                <ChevronRight className="w-4 h-4" />
-              </a>
-            </div>
-
-            {/* Credibility Seals */}
-            <div className="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs text-slate-400 border-t border-white/[0.06]">
-              <div className="flex items-center gap-1.5 text-amber-400">
-                <div className="flex">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
-                  ))}
-                </div>
-                <span className="font-bold text-white ml-1">4.9 / 5.0</span>
-              </div>
-              <span>•</span>
-              <span>Colegio de Abogados de Lima (CAL)</span>
-              <span>•</span>
-              <span className="text-emerald-400 font-semibold">✓ Secreto Profesional 100%</span>
-            </div>
           </div>
 
-          {/* Right Column: Floating Interactive Evaluation Glass Pod */}
-          <div className="lg:col-span-5" id="evaluacion">
-            <div className="p-7 sm:p-9 rounded-[2.5rem] bg-gradient-to-b from-white/[0.06] to-white/[0.02] border border-white/[0.1] shadow-[0_30px_90px_rgba(0,0,0,0.6)] backdrop-blur-2xl space-y-6 relative overflow-hidden ring-1 ring-white/[0.05]">
-              <div className="absolute -top-10 -right-10 w-40 h-40 bg-amber-500/15 rounded-full blur-3xl pointer-events-none" />
-
-              <div className="flex items-center justify-between border-b border-white/[0.08] pb-4">
-                <div>
-                  <span className="text-[10px] font-bold text-amber-400 uppercase tracking-widest block">
-                    ATENCIÓN DIRECTA
-                  </span>
-                  <h3 className="text-lg font-bold text-white">
-                    Evaluación de Caso en 60s
-                  </h3>
-                </div>
-                <div className="w-9 h-9 rounded-full bg-amber-400/10 border border-amber-400/30 flex items-center justify-center text-amber-400">
-                  <Scale className="w-4 h-4" />
-                </div>
-              </div>
-
-              <div className="space-y-3">
-                <label className="text-xs font-semibold text-slate-300 block">
-                  1. ¿Qué materia legal requiere tu empresa?
-                </label>
-                
-                <div className="grid grid-cols-2 gap-2.5">
-                  {[
-                    { id: "tributario", label: "Fiscal SUNAT", icon: "📊" },
-                    { id: "corporativo", label: "Contratos Corp", icon: "🏢" },
-                    { id: "laboral", label: "Laboral SUNAFIL", icon: "👥" },
-                    { id: "marcas", label: "Marcas INDECOPI", icon: "🛡️" },
-                  ].map((tab) => (
-                    <button
-                      key={tab.id}
-                      type="button"
-                      onClick={() => setSelectedCaseType(tab.id)}
-                      className={`p-3.5 rounded-2xl text-left text-xs font-medium transition-all flex items-center gap-2.5 border ${
-                        selectedCaseType === tab.id
-                          ? "bg-amber-400 text-slate-950 font-bold border-amber-300 shadow-[0_0_20px_rgba(245,158,11,0.4)] scale-102"
-                          : "bg-white/[0.02] text-slate-300 border-white/[0.06] hover:bg-white/[0.05]"
-                      }`}
-                    >
-                      <span className="text-base">{tab.icon}</span>
-                      <span>{tab.label}</span>
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/[0.06] space-y-2 text-xs">
-                <div className="flex items-center justify-between text-slate-400">
-                  <span>Asignación de socio legal:</span>
-                  <span className="font-bold text-emerald-400">Prioridad Inmediata</span>
-                </div>
-                <div className="flex items-center justify-between text-slate-400">
-                  <span>Formato de sesión:</span>
-                  <span className="font-bold text-white">Presencial o Zoom</span>
-                </div>
-              </div>
-
-              <a
-                href={dynamicWaLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full font-bold text-xs sm:text-sm bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 shadow-[0_0_25px_rgba(245,158,11,0.3)] transition-all text-center transform hover:scale-102"
-              >
-                <span>Solicitar Asesoría por WhatsApp</span>
-                <ArrowRight className="w-4 h-4" />
-              </a>
-
-              <p className="text-[10px] text-center text-slate-400 flex items-center justify-center gap-1">
-                <Lock className="w-3 h-3 text-amber-400" />
-                <span>Conversación encriptada bajo estricta confidencialidad.</span>
+          {/* Bottom Row: Massive Headline on Left + Floating Stats & Gold CTA on Right */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-end pt-12 sm:pt-20">
+            
+            {/* Left: Main Editorial Headline */}
+            <div className="lg:col-span-7 space-y-4">
+              <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-normal text-white tracking-tight leading-[1.08] drop-shadow-2xl">
+                Justice with <br />
+                Clarity in a <br />
+                Complex World
+              </h1>
+              
+              <p className="text-xs sm:text-sm text-[#C5A880] tracking-widest uppercase font-light pt-2">
+                Serving corporate & private clients since 2012
               </p>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Modern Floating Practice Areas Showcase */}
-      <section id="especialidades" className="py-16 px-4 sm:px-6 max-w-6xl mx-auto space-y-12">
-        <div className="text-center space-y-3 max-w-2xl mx-auto">
-          <span className="text-xs font-bold text-amber-400 uppercase tracking-widest">
-            SOLUCIONES JURÍDICAS A MEDIDA
-          </span>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            Especialidades de Práctica Legal
-          </h2>
-          <p className="text-xs sm:text-base text-slate-400">
-            Estructuras sólidas para proteger tus operaciones y maximizar tu rentabilidad tributaria.
-          </p>
-        </div>
-
-        {/* Dynamic Glass Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {[
-            {
-              icon: <TrendingUp className="w-6 h-6 text-amber-400" />,
-              title: "Defensa Tributaria & SUNAT",
-              desc: "Impugnación de reparos, auditorías preventivas y planeamiento tributario legal de alta eficiencia.",
-              badge: "Mayor Demanda"
-            },
-            {
-              icon: <Building2 className="w-6 h-6 text-blue-400" />,
-              title: "Derecho Corporativo & Contratos",
-              desc: "Elaboración de acuerdos de accionistas, fusiones, adquisiciones y blindaje contractual mercantil.",
-              badge: "Empresarial"
-            },
-            {
-              icon: <Briefcase className="w-6 h-6 text-purple-400" />,
-              title: "Laboral Corporativo & SUNAFIL",
-              desc: "Prevención de contingencias con colaboradores, despidos justificados y compliance normativo.",
-              badge: "Preventivo"
-            },
-            {
-              icon: <Scale className="w-6 h-6 text-emerald-400" />,
-              title: "Litigios & Arbitraje Comercial",
-              desc: "Representación firme en resolución de disputas ante juzgados comerciales y centros de arbitraje.",
-              badge: "Resolución"
-            },
-            {
-              icon: <ShieldCheck className="w-6 h-6 text-cyan-400" />,
-              title: "Marcas & Patentes INDECOPI",
-              desc: "Registro, defensa de marca y propiedad intelectual contra imitaciones y competencia desleal.",
-              badge: "Propiedad"
-            },
-            {
-              icon: <FileCheck2 className="w-6 h-6 text-rose-400" />,
-              title: "Blindaje Patrimonial",
-              desc: "Constitución de fideicomisos familiares y empresariales para resguardo seguro de activos.",
-              badge: "Patrimonio"
-            }
-          ].map((item, idx) => (
-            <div
-              key={idx}
-              className="p-8 rounded-[2rem] bg-gradient-to-b from-white/[0.04] to-white/[0.01] border border-white/[0.08] hover:border-amber-500/40 backdrop-blur-xl transition-all duration-300 group hover:-translate-y-1 space-y-4 flex flex-col justify-between"
-            >
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <div className="p-3.5 rounded-2xl bg-white/[0.04] border border-white/[0.08] shadow-inner">
-                    {item.icon}
-                  </div>
-                  <span className="text-[10px] font-bold px-3 py-1 rounded-full bg-white/[0.03] text-slate-300 border border-white/[0.06]">
-                    {item.badge}
-                  </span>
-                </div>
-
-                <h3 className="text-lg font-bold text-white group-hover:text-amber-300 transition-colors">
-                  {item.title}
-                </h3>
-
-                <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                  {item.desc}
-                </p>
+            {/* Right: Stats and Satin Gold CTA */}
+            <div className="lg:col-span-5 flex flex-col sm:flex-row lg:flex-col xl:flex-row items-start sm:items-end justify-between lg:justify-end gap-6 sm:gap-8">
+              
+              {/* Stat 1 */}
+              <div className="space-y-0.5">
+                <span className="font-sans text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight block">
+                  96%
+                </span>
+                <span className="text-xs sm:text-sm text-slate-300 font-light block">
+                  Success Rate
+                </span>
               </div>
 
-              <div className="pt-4 border-t border-white/[0.06] flex items-center justify-between">
-                <span className="text-[11px] text-amber-400/90 font-medium">Asesoría disponible</span>
+              {/* Stat 2 */}
+              <div className="space-y-0.5">
+                <span className="font-sans text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight block">
+                  150+
+                </span>
+                <span className="text-xs sm:text-sm text-slate-300 font-light block">
+                  Successful Cases
+                </span>
+              </div>
+
+              {/* Gold Button Accent */}
+              <div>
                 <a
                   href={dynamicWaLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs font-bold text-white hover:text-amber-300 flex items-center gap-1"
+                  className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 rounded-sm font-medium text-xs sm:text-sm bg-gradient-to-r from-[#C5A880] via-[#DFC39C] to-[#C5A880] hover:from-[#d1b690] hover:to-[#DFC39C] text-slate-950 shadow-[0_10px_30px_rgba(197,168,128,0.3)] transition-all duration-300 transform hover:scale-105 active:scale-95"
                 >
-                  Consultar →
+                  <span className="font-semibold">Get Legal Guidance</span>
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* 🏛️ EDITORIAL PRACTICE AREAS (Sin cajas cuadradas, tipografía refinada) */}
+      <section id="practice-areas" className="py-24 px-6 sm:px-12 max-w-7xl mx-auto space-y-16">
+        
+        {/* Section Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-white/10 pb-8">
+          <div className="space-y-2">
+            <span className="text-[11px] font-mono text-[#C5A880] uppercase tracking-[0.2em] block">
+              EXPERTISE & JURISDICTION
+            </span>
+            <h2 className="font-serif text-3xl sm:text-5xl font-normal text-white tracking-tight">
+              Practice Areas
+            </h2>
+          </div>
+          <p className="text-xs sm:text-sm font-light text-slate-400 max-w-md leading-relaxed">
+            Delivering high-stakes legal solutions with precision, strategic rigor, and total discretion for leading companies and high-net-worth individuals.
+          </p>
+        </div>
+
+        {/* Editorial Practice Rows (Clean Line Separators) */}
+        <div className="space-y-0 divide-y divide-white/10">
+          {[
+            {
+              num: "01",
+              title: "Corporate & Commercial Law",
+              desc: "Mergers & acquisitions, cross-border contract structuring, shareholder agreements, and strategic corporate governance.",
+              linkText: "Explore Corporate Practice"
+            },
+            {
+              num: "02",
+              title: "Tax Defense & Fiscal Litigation",
+              desc: "Defending enterprises against unlawful audit determinations, SUNAT disputes, and designing fully compliant tax optimization strategies.",
+              linkText: "Explore Tax Defense"
+            },
+            {
+              num: "03",
+              title: "Commercial Arbitration & High-Stakes Litigation",
+              desc: "Unwavering advocacy before arbitration tribunals and commercial courts to protect mission-critical business assets.",
+              linkText: "Explore Litigation"
+            },
+            {
+              num: "04",
+              title: "Intellectual Property & Brand Protection",
+              desc: "Comprehensive trademark registration, patent litigation, and trade secret enforcement before INDECOPI and international bodies.",
+              linkText: "Explore IP Law"
+            },
+            {
+              num: "05",
+              title: "Asset Protection & Fiduciary Trusts",
+              desc: "Structuring bespoke private wealth trusts and generational succession frameworks to secure legacy and insulate from third-party liabilities.",
+              linkText: "Explore Wealth Structuring"
+            }
+          ].map((area, idx) => (
+            <div
+              key={idx}
+              className="py-10 sm:py-12 grid grid-cols-1 md:grid-cols-12 gap-6 items-center group hover:bg-white/[0.01] transition-colors px-2 sm:px-4"
+            >
+              <div className="md:col-span-1 text-xs font-mono text-[#C5A880]">
+                {area.num}
+              </div>
+
+              <div className="md:col-span-4">
+                <h3 className="font-serif text-2xl sm:text-3xl font-normal text-white group-hover:text-[#DFC39C] transition-colors">
+                  {area.title}
+                </h3>
+              </div>
+
+              <div className="md:col-span-5">
+                <p className="text-xs sm:text-sm font-light text-slate-400 leading-relaxed">
+                  {area.desc}
+                </p>
+              </div>
+
+              <div className="md:col-span-2 flex justify-start md:justify-end">
+                <a
+                  href={dynamicWaLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-xs font-light text-[#C5A880] group-hover:text-white transition-colors"
+                >
+                  <span>Consult</span>
+                  <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
                 </a>
               </div>
             </div>
           ))}
         </div>
+
       </section>
 
-      {/* Floating Verified Results Pod */}
-      <section id="resultados" className="py-12 px-4 sm:px-6 max-w-6xl mx-auto">
-        <div className="p-8 sm:p-12 rounded-[2.5rem] bg-gradient-to-br from-white/[0.04] via-white/[0.02] to-transparent border border-white/[0.08] backdrop-blur-2xl space-y-8 shadow-[0_30px_90px_rgba(0,0,0,0.5)]">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-white/[0.06] pb-6">
+      {/* 🏛️ PROVEN CASE OUTCOMES */}
+      <section id="case-studies" className="py-20 px-6 sm:px-12 max-w-7xl mx-auto">
+        <div className="p-8 sm:p-14 bg-gradient-to-b from-[#14100C] to-[#0A0806] border border-[#C5A880]/20 rounded-none space-y-10 relative overflow-hidden">
+          
+          <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 border-b border-white/10 pb-6">
             <div>
-              <span className="text-xs font-bold text-amber-400 uppercase tracking-widest block">
-                IMPACTO MEDIBLE
+              <span className="text-[10px] font-mono text-[#C5A880] uppercase tracking-[0.2em] block">
+                NOTABLE VERDICTS & RESULTS
               </span>
-              <h3 className="text-2xl sm:text-3xl font-extrabold text-white">
-                Casos de Éxito Corporativo
+              <h3 className="font-serif text-2xl sm:text-4xl font-normal text-white">
+                Recent Case Outcomes
               </h3>
             </div>
-            <div className="px-3.5 py-1.5 rounded-full bg-emerald-500/10 text-emerald-300 text-xs font-bold border border-emerald-500/30">
-              ✓ Dictámenes Favorables 99.2%
+            <span className="text-xs font-light text-slate-400">
+              Verified Legal Precedents (2024–2026)
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12">
+            <div className="space-y-3">
+              <span className="text-xs font-mono text-[#C5A880] block">Sector: Industrial Manufacturing</span>
+              <p className="font-serif text-3xl font-normal text-white">S/ 2,400,000</p>
+              <p className="text-xs font-light text-slate-400 leading-relaxed">
+                Complete revocation of unlawful tax liabilities and penalties before the Fiscal Tribunal.
+              </p>
+            </div>
+
+            <div className="space-y-3">
+              <span className="text-xs font-mono text-[#C5A880] block">Sector: Commercial Real Estate</span>
+              <p className="font-serif text-3xl font-normal text-white">S/ 1,850,000</p>
+              <p className="text-xs font-light text-slate-400 leading-relaxed">
+                Successful settlement and resolution of complex multi-party commercial breach of contract.
+              </p>
+            </div>
+
+            <div className="space-y-3">
+              <span className="text-xs font-mono text-[#C5A880] block">Sector: Private Wealth</span>
+              <p className="font-serif text-3xl font-normal text-white">100% Insulated</p>
+              <p className="text-xs font-light text-slate-400 leading-relaxed">
+                Establishment of multi-tier private trust shielding corporate real estate assets.
+              </p>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/[0.06] space-y-2">
-              <div className="flex items-center justify-between text-xs">
-                <span className="text-slate-400">Sector Industrial</span>
-                <span className="text-emerald-400 font-bold">Revocación SUNAT</span>
-              </div>
-              <p className="text-2xl font-black text-white">S/ 2,400,000</p>
-              <p className="text-xs text-slate-400 leading-relaxed">
-                Reparo tributario indebido revocado con éxito ante el Tribunal Fiscal.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/[0.06] space-y-2">
-              <div className="flex items-center justify-between text-xs">
-                <span className="text-slate-400">Sector Minería & B2B</span>
-                <span className="text-emerald-400 font-bold">Blindaje Total</span>
-              </div>
-              <p className="text-2xl font-black text-white">S/ 1,850,000</p>
-              <p className="text-xs text-slate-400 leading-relaxed">
-                Estructuración de contratos y mitigación de contingencias laborales.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/[0.06] space-y-2">
-              <div className="flex items-center justify-between text-xs">
-                <span className="text-slate-400">Grupo Inmobiliario</span>
-                <span className="text-amber-400 font-bold">Fideicomiso</span>
-              </div>
-              <p className="text-2xl font-black text-white">100% Protegido</p>
-              <p className="text-xs text-slate-400 leading-relaxed">
-                Blindaje fiduciario de activos para 3 proyectos residenciales en preventa.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 
       {/* Floating WhatsApp Widget */}
       <DemoFloatingWhatsApp
-        businessName="Valenzuela & Asociados"
-        badgeText="¿Deseas una consulta legal?"
-        defaultMessage="Hola, estuve viendo su landing page y deseo agendar una consulta con un abogado especialista."
+        businessName="Brian Anderson Legal"
+        badgeText="¿Deseas una consulta legal confidencial?"
+        defaultMessage="Hola Brian Anderson, vi su página web y deseo agendar una consulta confidencial."
       />
 
       {/* Sticky Bottom Conversion Bar */}
