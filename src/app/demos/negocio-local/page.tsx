@@ -17,9 +17,9 @@ import {
   Star, 
   ChevronRight, 
   MessageCircle, 
-  TrendingUp,
-  ShieldCheck,
-  Flame
+  TrendingUp, 
+  ShieldCheck, 
+  Flame 
 } from "lucide-react";
 
 export default function DemoNegocioLocalPage() {
@@ -35,71 +35,71 @@ export default function DemoNegocioLocalPage() {
   const dynamicWaLink = getWhatsAppLink(courseMessages[selectedCourse] || demoData.whatsAppMessage);
 
   return (
-    <div className="min-h-screen bg-[#0A0516] text-slate-100 font-sans pb-36 relative overflow-x-hidden selection:bg-purple-500 selection:text-white">
-      {/* Ambient Mesh Glows */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[550px] bg-gradient-to-b from-purple-600/20 via-pink-600/10 to-transparent blur-[140px] pointer-events-none -z-10" />
-      <div className="absolute top-[40%] right-[-10%] w-[500px] h-[500px] bg-pink-600/10 blur-[150px] pointer-events-none -z-10" />
+    <div className="min-h-screen bg-[#080412] text-slate-100 font-sans pb-36 relative overflow-x-hidden selection:bg-purple-500 selection:text-white">
+      
+      {/* 🔮 Electric Violet Mesh & Neon Auras */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1200px] h-[650px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-600/20 via-pink-600/10 to-transparent blur-[160px] pointer-events-none -z-10" />
+      <div className="absolute top-[40%] right-[-10%] w-[600px] h-[600px] bg-pink-600/10 blur-[180px] pointer-events-none -z-10" />
 
-      {/* Top Demo Bar */}
-      <div className="bg-slate-900/90 text-xs py-2.5 px-4 text-center border-b border-slate-800/80 backdrop-blur-md flex flex-wrap items-center justify-center gap-2">
-        <span className="bg-purple-500/20 text-purple-300 font-bold px-2.5 py-0.5 rounded-full border border-purple-400/30">
+      {/* Demo Pill Bar */}
+      <div className="py-2.5 px-4 bg-white/[0.02] border-b border-white/[0.06] backdrop-blur-xl text-center text-xs flex items-center justify-center gap-2">
+        <span className="px-2.5 py-0.5 rounded-full bg-purple-400/15 text-purple-300 font-bold border border-purple-400/30 text-[10px]">
           LANDING PAGE DEMO
         </span>
         <span className="text-slate-300">
-          Estructura de alta conversión para <strong>Academias, Cursos en Vivo, Talleres y Marcas de Formación</strong>
+          Diseño para <strong>Academias, Cursos en Vivo, Talleres y Marcas de Formación</strong>
         </span>
       </div>
 
-      {/* Modern EdTech Header */}
-      <header className="border-b border-purple-950/70 bg-[#120824]/80 backdrop-blur-xl sticky top-0 z-40">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+      {/* Floating Capsule Header */}
+      <header className="sticky top-4 z-40 max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="flex items-center justify-between px-6 py-3.5 rounded-full bg-[#100720]/70 border border-white/[0.08] backdrop-blur-2xl shadow-[0_10px_40px_rgba(0,0,0,0.5)]">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center font-black text-white shadow-lg shadow-purple-500/30 text-lg">
+            <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-purple-500 via-pink-500 to-amber-300 flex items-center justify-center font-black text-white text-base shadow-[0_0_20px_rgba(168,85,247,0.3)]">
               🚀
             </div>
             <div>
-              <span className="font-extrabold text-base tracking-tight text-white block">
+              <span className="font-extrabold text-sm tracking-tight text-white block">
                 ACADEMIA LÍDER DIGITAL
               </span>
-              <span className="text-[10px] font-mono text-purple-400 uppercase tracking-widest block font-semibold">
+              <span className="text-[9px] font-mono text-purple-400 uppercase tracking-widest block font-semibold">
                 Formación Ejecutiva & Práctica
               </span>
             </div>
           </div>
 
-          <nav className="hidden lg:flex items-center gap-8 text-xs font-semibold uppercase tracking-wider text-slate-400">
-            <a href="#cursos" className="hover:text-purple-400 transition">Talleres</a>
-            <a href="#inscripcion" className="hover:text-purple-400 transition">Inscripción</a>
-            <a href="#metodologia" className="hover:text-purple-400 transition">Metodología</a>
-            <a href="#comunidad" className="hover:text-purple-400 transition">Comunidad</a>
+          <nav className="hidden lg:flex items-center gap-7 text-xs font-semibold uppercase tracking-wider text-slate-400">
+            <a href="#cursos" className="hover:text-purple-300 transition-colors">Talleres</a>
+            <a href="#inscripcion" className="hover:text-purple-300 transition-colors">Inscripción</a>
+            <a href="#comunidad" className="hover:text-purple-300 transition-colors">Comunidad</a>
           </nav>
 
           <a
             href={dynamicWaLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 sm:px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white shadow-lg shadow-purple-500/20 transition-all transform hover:scale-105"
+            className="px-4 sm:px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white shadow-[0_0_20px_rgba(168,85,247,0.3)] transition-all transform hover:scale-105"
           >
             Próximos Inicios
           </a>
         </div>
       </header>
 
-      {/* Hero Section (Dribbble Split 60/40 Layout) */}
+      {/* Hero Section */}
       <section className="pt-12 sm:pt-20 pb-16 px-4 sm:px-6 max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           
-          {/* Left Hero Column */}
+          {/* Left Column */}
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-950/80 border border-purple-500/30 text-purple-300 text-xs font-medium shadow-xl">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.03] border border-purple-500/30 backdrop-blur-xl text-purple-300 text-xs font-medium shadow-xl">
               <Flame className="w-4 h-4 text-pink-400 shrink-0 animate-pulse" />
-              <span>Inicios Todas las Semanas • Grupos Reducidos de Máx. 15 Alumnos</span>
+              <span>Inicios Semanales • Grupos Reducidos de Máximo 15 Personas</span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.12]">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1]">
               Aprende Habilidades de Alto Impacto con{" "}
-              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-amber-300 bg-clip-text text-transparent">
-                Expertos en Vivo.
+              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-amber-300 bg-clip-text text-transparent drop-shadow-[0_0_35px_rgba(168,85,247,0.25)]">
+                Especialistas en Vivo.
               </span>
             </h1>
 
@@ -108,12 +108,12 @@ export default function DemoNegocioLocalPage() {
             </p>
 
             {/* CTAs */}
-            <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4">
+            <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
               <a
                 href={dynamicWaLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-2xl font-bold text-sm sm:text-base bg-emerald-400 hover:bg-emerald-300 text-slate-950 shadow-xl shadow-emerald-500/25 transition-all transform hover:scale-105"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full font-bold text-sm sm:text-base bg-emerald-400 hover:bg-emerald-300 text-slate-950 shadow-[0_0_30px_rgba(16,185,129,0.35)] transition-all transform hover:scale-105"
               >
                 <MessageCircle className="w-5 h-5 fill-slate-950" />
                 <span>Solicitar Temario por WhatsApp</span>
@@ -121,15 +121,15 @@ export default function DemoNegocioLocalPage() {
 
               <a
                 href="#cursos"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-2xl font-semibold text-xs sm:text-sm text-slate-300 hover:text-white bg-slate-900/80 hover:bg-slate-800 border border-slate-800 transition"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full font-semibold text-xs sm:text-sm text-slate-300 hover:text-white bg-white/[0.03] hover:bg-white/[0.07] border border-white/10 backdrop-blur-xl transition"
               >
                 <span>Explorar Talleres</span>
                 <ChevronRight className="w-4 h-4" />
               </a>
             </div>
 
-            {/* Trust Badges */}
-            <div className="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs text-slate-400 border-t border-purple-950">
+            {/* Trust Seals */}
+            <div className="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs text-slate-400 border-t border-white/[0.06]">
               <div className="flex items-center gap-1.5 text-amber-400">
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
@@ -141,23 +141,25 @@ export default function DemoNegocioLocalPage() {
               <span>•</span>
               <span>+2,100 Alumnos Graduados</span>
               <span>•</span>
-              <span className="text-emerald-400 font-semibold">✓ Certificado con Código QR</span>
+              <span className="text-emerald-400 font-semibold">✓ Certificado Oficial</span>
             </div>
           </div>
 
-          {/* Right Hero Column: Interactive Course Selector Card */}
+          {/* Right Column: Floating Course Selector Pod */}
           <div className="lg:col-span-5" id="inscripcion">
-            <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-b from-[#1C0F32] to-[#120822] border border-purple-500/30 shadow-2xl space-y-5 relative overflow-hidden backdrop-blur-xl">
-              <div className="flex items-center justify-between border-b border-purple-950 pb-4">
+            <div className="p-7 sm:p-9 rounded-[2.5rem] bg-gradient-to-b from-white/[0.06] to-white/[0.02] border border-white/[0.1] shadow-[0_30px_90px_rgba(0,0,0,0.6)] backdrop-blur-2xl space-y-6 relative overflow-hidden ring-1 ring-white/[0.05]">
+              <div className="absolute -top-10 -right-10 w-40 h-40 bg-purple-500/15 rounded-full blur-3xl pointer-events-none" />
+
+              <div className="flex items-center justify-between border-b border-white/[0.08] pb-4">
                 <div>
-                  <span className="text-[10px] font-bold text-purple-400 uppercase tracking-wider block">
+                  <span className="text-[10px] font-bold text-purple-400 uppercase tracking-widest block">
                     CUPOS LIMITADOS
                   </span>
-                  <h3 className="text-base sm:text-lg font-bold text-white">
+                  <h3 className="text-lg font-bold text-white">
                     Consulta Disponibilidad de Talleres
                   </h3>
                 </div>
-                <div className="w-8 h-8 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400">
+                <div className="w-9 h-9 rounded-full bg-purple-400/10 border border-purple-400/30 flex items-center justify-center text-purple-400">
                   <GraduationCap className="w-4 h-4" />
                 </div>
               </div>
@@ -177,14 +179,14 @@ export default function DemoNegocioLocalPage() {
                       key={tab.id}
                       type="button"
                       onClick={() => setSelectedCourse(tab.id)}
-                      className={`w-full p-3 rounded-xl text-left text-xs font-medium transition-all flex items-center justify-between border ${
+                      className={`w-full p-3.5 rounded-2xl text-left text-xs font-medium transition-all flex items-center justify-between border ${
                         selectedCourse === tab.id
-                          ? "bg-purple-600 text-white font-bold border-purple-400 shadow-md shadow-purple-500/30"
-                          : "bg-slate-950/60 text-slate-300 border-purple-950 hover:border-purple-500/30"
+                          ? "bg-purple-600 text-white font-bold border-purple-400 shadow-[0_0_20px_rgba(168,85,247,0.4)] scale-102"
+                          : "bg-white/[0.02] text-slate-300 border-white/[0.06] hover:bg-white/[0.05]"
                       }`}
                     >
                       <span>{tab.label}</span>
-                      <span className="text-[10px] px-2 py-0.5 rounded-md bg-purple-950/80 text-purple-300">
+                      <span className="text-[10px] px-2.5 py-0.5 rounded-full bg-purple-950/80 text-purple-300 border border-purple-500/30">
                         {tab.badge}
                       </span>
                     </button>
@@ -192,10 +194,10 @@ export default function DemoNegocioLocalPage() {
                 </div>
               </div>
 
-              <div className="p-4 rounded-2xl bg-slate-950/80 border border-purple-950 space-y-2 text-xs">
+              <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/[0.06] space-y-2 text-xs">
                 <div className="flex items-center justify-between text-slate-400">
-                  <span>Modalidad:</span>
-                  <span className="font-bold text-white">Clases en Vivo vía Zoom</span>
+                  <span>Modalidad de clases:</span>
+                  <span className="font-bold text-white">En Vivo vía Zoom</span>
                 </div>
                 <div className="flex items-center justify-between text-slate-400">
                   <span>Acceso a grabaciones:</span>
@@ -207,7 +209,7 @@ export default function DemoNegocioLocalPage() {
                 href={dynamicWaLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl font-bold text-xs sm:text-sm bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white shadow-lg shadow-purple-500/25 transition-all text-center"
+                className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full font-bold text-xs sm:text-sm bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white shadow-[0_0_25px_rgba(168,85,247,0.3)] transition-all text-center transform hover:scale-102"
               >
                 <span>Solicitar Temario Completo por WhatsApp</span>
                 <ArrowRight className="w-4 h-4" />
@@ -215,154 +217,109 @@ export default function DemoNegocioLocalPage() {
 
               <p className="text-[10px] text-center text-slate-400 flex items-center justify-center gap-1">
                 <ShieldCheck className="w-3 h-3 text-purple-400" />
-                <span>Garantía de satisfacción con devolución en los primeros 7 días.</span>
+                <span>Garantía de satisfacción con devolución en 7 días.</span>
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Bento Grid: Courses & Perks */}
+      {/* Floating Courses Showcase */}
       <section id="cursos" className="py-16 px-4 sm:px-6 max-w-6xl mx-auto space-y-12">
         <div className="text-center space-y-3 max-w-2xl mx-auto">
           <span className="text-xs font-bold text-purple-400 uppercase tracking-widest">
-            METODOLOGÍA PRÁCTICA
+            METODOLOGÍA 100% PRÁCTICA
           </span>
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-white">
-            Programas Diseñados para Dar Resultados
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+            Programas y Talleres
           </h2>
           <p className="text-xs sm:text-base text-slate-400">
-            Sin teoría de relleno: proyectos aplicados que puedes implementar de inmediato.
+            Aprende construyendo soluciones reales para tu carrera o empresa.
           </p>
         </div>
 
-        {/* Bento Grid Layout */}
+        {/* Dynamic Glass Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Card 1 (Large - Featured) */}
-          <div className="md:col-span-2 p-8 rounded-3xl bg-gradient-to-br from-[#1E0F36] via-[#150928] to-[#0D051A] border border-purple-950 hover:border-purple-500/40 transition-all duration-300 flex flex-col justify-between group">
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <span className="text-3xl">📱</span>
-                <span className="text-xs font-bold px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30">
-                  Más Vendido
-                </span>
+          {[
+            {
+              icon: "📱",
+              title: "Marketing Digital & Meta Ads Pro",
+              desc: "Estrategias de anuncios en Facebook, Instagram y WhatsApp para generar prospectos todos los días.",
+              badge: "Más Vendido",
+              duration: "4 Semanas"
+            },
+            {
+              icon: "📈",
+              title: "Gestión Financiera para Pymes",
+              desc: "Flujo de caja, cálculo de precios rentables y ordenamiento tributario para evitar pérdidas.",
+              badge: "Pymes",
+              duration: "3 Semanas"
+            },
+            {
+              icon: "🤝",
+              title: "Ventas Consultivas & Cierre B2B",
+              desc: "Psicología de ventas para cerrar contratos de alto valor sin regalar descuentos innecesarios.",
+              badge: "Cierre Rápido",
+              duration: "2 Semanas"
+            },
+            {
+              icon: "🎓",
+              title: "Certificado Oficial con QR",
+              desc: "Diploma digital verificable para adjuntar a tu perfil de LinkedIn y respaldar tus conocimientos.",
+              badge: "Oficial",
+              duration: "Incluido"
+            },
+            {
+              icon: "👥",
+              title: "Comunidad Privada de Alumnos",
+              desc: "Acceso a grupo de networking en WhatsApp para resolver dudas y compartir oportunidades de negocio.",
+              badge: "Comunidad",
+              duration: "Acceso Vitalicio"
+            },
+            {
+              icon: "🎥",
+              title: "Campus Virtual 24/7",
+              desc: "Plataforma con todas las grabaciones en HD, plantillas descargables y guías paso a paso.",
+              badge: "Recursos",
+              duration: "Acceso Total"
+            }
+          ].map((item, idx) => (
+            <div
+              key={idx}
+              className="p-8 rounded-[2rem] bg-gradient-to-b from-white/[0.04] to-white/[0.01] border border-white/[0.08] hover:border-purple-500/40 backdrop-blur-xl transition-all duration-300 group hover:-translate-y-1 space-y-4 flex flex-col justify-between"
+            >
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <span className="text-3xl p-3 rounded-2xl bg-white/[0.04] border border-white/[0.08]">
+                    {item.icon}
+                  </span>
+                  <span className="text-[10px] font-bold px-3 py-1 rounded-full bg-white/[0.03] text-purple-300 border border-white/[0.06]">
+                    {item.badge}
+                  </span>
+                </div>
+
+                <h3 className="text-lg font-bold text-white group-hover:text-purple-300 transition-colors">
+                  {item.title}
+                </h3>
+
+                <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                  {item.desc}
+                </p>
               </div>
 
-              <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-purple-300 transition">
-                Marketing Digital & Meta Ads Pro (Facebook, Instagram & WhatsApp)
-              </h3>
-
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-xl">
-                Aprende la configuración profesional de campañas para captar clientes calificados todos los días: segmentación avanzada, copys persuasivos, creativos y optimización de presupuesto.
-              </p>
-            </div>
-
-            <div className="mt-8 pt-6 border-t border-purple-950 flex flex-wrap items-center justify-between gap-4">
-              <div className="flex items-center gap-6 text-xs text-slate-400">
-                <span>✓ 4 Semanas en vivo</span>
-                <span>✓ Plantillas listas</span>
-                <span>✓ Asesoría 1 a 1</span>
+              <div className="pt-4 border-t border-white/[0.06] flex items-center justify-between">
+                <span className="text-[11px] text-purple-400/90 font-medium">⏱️ {item.duration}</span>
+                <a
+                  href={dynamicWaLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-bold text-white hover:text-purple-300 flex items-center gap-1"
+                >
+                  Inscribirme →
+                </a>
               </div>
-              <a
-                href={dynamicWaLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs font-bold text-purple-400 hover:text-purple-300 flex items-center gap-1"
-              >
-                Inscribirme Ahora →
-              </a>
             </div>
-          </div>
-
-          {/* Card 2 */}
-          <div className="p-8 rounded-3xl bg-gradient-to-br from-[#1A0C30] to-[#100620] border border-purple-950 hover:border-purple-500/40 transition-all duration-300 flex flex-col justify-between group">
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <span className="text-3xl">📈</span>
-                <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300">
-                  Pymes
-                </span>
-              </div>
-
-              <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-purple-300 transition">
-                Gestión Financiera para Pymes
-              </h3>
-
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                Control de flujo de caja, estructura de costos y cálculo de punto de equilibrio para negocios en crecimiento.
-              </p>
-            </div>
-
-            <div className="mt-6 pt-4 border-t border-purple-950">
-              <span className="text-xs font-bold text-purple-300">Incluye plantillas Excel automáticas</span>
-            </div>
-          </div>
-
-          {/* Card 3 */}
-          <div className="p-8 rounded-3xl bg-gradient-to-br from-[#1A0C30] to-[#100620] border border-purple-950 hover:border-purple-500/40 transition-all duration-300 flex flex-col justify-between group">
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <span className="text-3xl">🤝</span>
-                <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300">
-                  Cierre Alto Valor
-                </span>
-              </div>
-
-              <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-purple-300 transition">
-                Ventas Consultivas & Cierre B2B
-              </h3>
-
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                Técnicas modernas para presentar propuestas y cerrar contratos de alto valor sin regalar descuentos.
-              </p>
-            </div>
-
-            <div className="mt-6 pt-4 border-t border-purple-950">
-              <span className="text-xs font-bold text-slate-400">Simulaciones de rol en vivo</span>
-            </div>
-          </div>
-
-          {/* Card 4 */}
-          <div className="p-8 rounded-3xl bg-gradient-to-br from-[#1A0C30] to-[#100620] border border-purple-950 hover:border-purple-500/40 transition-all duration-300 flex flex-col justify-between group">
-            <div className="space-y-4">
-              <div className="p-3.5 rounded-2xl bg-purple-500/10 border border-purple-500/20 text-purple-400 w-fit">
-                <Award className="w-6 h-6" />
-              </div>
-
-              <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-purple-300 transition">
-                Certificado Oficial Verificable
-              </h3>
-
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                Diploma digital con código QR de validación que puedes adjuntar directamente a tu perfil de LinkedIn y CV.
-              </p>
-            </div>
-
-            <div className="mt-6 pt-4 border-t border-purple-950">
-              <span className="text-xs font-bold text-emerald-400">Reconocido en la industria</span>
-            </div>
-          </div>
-
-          {/* Card 5 */}
-          <div className="p-8 rounded-3xl bg-gradient-to-br from-[#1A0C30] to-[#100620] border border-purple-950 hover:border-purple-500/40 transition-all duration-300 flex flex-col justify-between group">
-            <div className="space-y-4">
-              <div className="p-3.5 rounded-2xl bg-purple-500/10 border border-purple-500/20 text-purple-400 w-fit">
-                <Users className="w-6 h-6" />
-              </div>
-
-              <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-purple-300 transition">
-                Comunidad Privada de Alumnos
-              </h3>
-
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                Acceso a grupo exclusivo de WhatsApp para resolver dudas, hacer networking y compartir oportunidades laborales.
-              </p>
-            </div>
-
-            <div className="mt-6 pt-4 border-t border-purple-950">
-              <span className="text-xs font-bold text-slate-400">Acceso vitalicio sin pagos extra</span>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 

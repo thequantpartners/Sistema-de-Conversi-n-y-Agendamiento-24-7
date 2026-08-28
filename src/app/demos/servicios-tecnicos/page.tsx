@@ -13,14 +13,12 @@ import {
   CheckCircle2, 
   Flame, 
   Wind, 
-  Truck, 
   Building, 
   ChevronRight, 
   MessageCircle, 
-  AlertCircle,
-  FileCheck2,
-  ArrowRight,
-  Star
+  FileCheck2, 
+  ArrowRight, 
+  Star 
 } from "lucide-react";
 
 export default function DemoServiciosTecnicosPage() {
@@ -37,50 +35,50 @@ export default function DemoServiciosTecnicosPage() {
   const dynamicWaLink = getWhatsAppLink(serviceMessages[selectedService] || demoData.whatsAppMessage);
 
   return (
-    <div className="min-h-screen bg-[#0C0904] text-slate-100 font-sans pb-36 relative overflow-x-hidden selection:bg-amber-500 selection:text-slate-950">
-      {/* Ambient Mesh Glows */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[550px] bg-gradient-to-b from-amber-600/15 via-orange-600/10 to-transparent blur-[140px] pointer-events-none -z-10" />
-      <div className="absolute top-[40%] right-[-10%] w-[500px] h-[500px] bg-orange-600/10 blur-[150px] pointer-events-none -z-10" />
+    <div className="min-h-screen bg-[#0A0703] text-slate-100 font-sans pb-36 relative overflow-x-hidden selection:bg-amber-500 selection:text-slate-950">
+      
+      {/* 🔥 High-Urgency Ambient Amber/Flame Glows */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1200px] h-[650px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-600/20 via-orange-600/10 to-transparent blur-[160px] pointer-events-none -z-10" />
+      <div className="absolute top-[40%] right-[-10%] w-[600px] h-[600px] bg-orange-600/10 blur-[180px] pointer-events-none -z-10" />
 
-      {/* Top Demo Bar */}
-      <div className="bg-slate-900/90 text-xs py-2.5 px-4 text-center border-b border-slate-800/80 backdrop-blur-md flex flex-wrap items-center justify-center gap-2">
-        <span className="bg-amber-500/20 text-amber-300 font-bold px-2.5 py-0.5 rounded-full border border-amber-400/30">
+      {/* Demo Pill Bar */}
+      <div className="py-2.5 px-4 bg-white/[0.02] border-b border-white/[0.06] backdrop-blur-xl text-center text-xs flex items-center justify-center gap-2">
+        <span className="px-2.5 py-0.5 rounded-full bg-amber-400/15 text-amber-300 font-bold border border-amber-400/30 text-[10px]">
           LANDING PAGE DEMO
         </span>
         <span className="text-slate-300">
-          Estructura de alta conversión para <strong>Aire Acondicionado, Electricidad y Servicios a Domicilio</strong>
+          Diseño para <strong>Aire Acondicionado, Electricidad, Contratistas y Mantenimiento</strong>
         </span>
       </div>
 
-      {/* Urgent Dispatch Header */}
-      <header className="border-b border-amber-950/70 bg-[#160E04]/80 backdrop-blur-xl sticky top-0 z-40">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+      {/* Floating Capsule Header */}
+      <header className="sticky top-4 z-40 max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="flex items-center justify-between px-6 py-3.5 rounded-full bg-[#140D04]/70 border border-white/[0.08] backdrop-blur-2xl shadow-[0_10px_40px_rgba(0,0,0,0.5)]">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-amber-400 via-amber-500 to-orange-600 flex items-center justify-center font-black text-slate-950 shadow-lg shadow-amber-500/20 text-lg">
+            <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-amber-400 via-orange-500 to-amber-300 flex items-center justify-center font-black text-slate-950 text-base shadow-[0_0_20px_rgba(245,158,11,0.3)]">
               ⚡
             </div>
             <div>
-              <span className="font-extrabold text-base tracking-tight text-white block">
+              <span className="font-extrabold text-sm tracking-tight text-white block">
                 CLIMA & SOLUCIONES PRO
               </span>
-              <span className="text-[10px] font-mono text-amber-400 uppercase tracking-widest block font-semibold">
+              <span className="text-[9px] font-mono text-amber-400 uppercase tracking-widest block font-semibold">
                 Ingeniería en Climatización & Obras
               </span>
             </div>
           </div>
 
-          <nav className="hidden lg:flex items-center gap-8 text-xs font-semibold uppercase tracking-wider text-slate-400">
-            <a href="#servicios" className="hover:text-amber-400 transition">Servicios</a>
-            <a href="#estimador" className="hover:text-amber-400 transition">Cotizador Express</a>
-            <a href="#garantia" className="hover:text-amber-400 transition">Garantía Escrita</a>
-            <a href="#marcas" className="hover:text-amber-400 transition">Marcas</a>
+          <nav className="hidden lg:flex items-center gap-7 text-xs font-semibold uppercase tracking-wider text-slate-400">
+            <a href="#servicios" className="hover:text-amber-300 transition-colors">Servicios</a>
+            <a href="#cotizador" className="hover:text-amber-300 transition-colors">Cotizador Express</a>
+            <a href="#garantias" className="hover:text-amber-300 transition-colors">Garantía Escrita</a>
           </nav>
 
           <a
             href={dynamicWaLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 sm:px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-300 hover:to-orange-400 text-slate-950 shadow-lg shadow-amber-500/20 transition-all transform hover:scale-105 flex items-center gap-1.5"
+            className="px-4 sm:px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-300 hover:to-orange-400 text-slate-950 shadow-[0_0_20px_rgba(245,158,11,0.3)] transition-all transform hover:scale-105 flex items-center gap-1.5"
           >
             <PhoneCall className="w-3.5 h-3.5" />
             <span>Emergencias 24h</span>
@@ -88,35 +86,35 @@ export default function DemoServiciosTecnicosPage() {
         </div>
       </header>
 
-      {/* Hero Section (Dribbble Split 60/40 Layout) */}
+      {/* Hero Section */}
       <section className="pt-12 sm:pt-20 pb-16 px-4 sm:px-6 max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           
-          {/* Left Hero Column */}
+          {/* Left Column */}
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-950/80 border border-amber-500/30 text-amber-300 text-xs font-medium shadow-xl">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.03] border border-amber-500/30 backdrop-blur-xl text-amber-300 text-xs font-medium shadow-xl">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-              <span>Unidades Móviles Disponibles en Lima • Llegada en 45 Min</span>
+              <span>Unidades Móviles en Lima • Llegada en 45 Minutos</span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.12]">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1]">
               Instalación y Reparación de Aire Acondicionado con{" "}
-              <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-amber-300 bg-clip-text text-transparent">
-                Garantía Escrita de 12 Meses.
+              <span className="bg-gradient-to-r from-amber-300 via-orange-400 to-yellow-400 bg-clip-text text-transparent drop-shadow-[0_0_35px_rgba(245,158,11,0.25)]">
+                Garantía de 12 Meses.
               </span>
             </h1>
 
             <p className="text-sm sm:text-lg text-slate-300 leading-relaxed max-w-xl mx-auto lg:mx-0">
-              Técnicos certificados para hogares, oficinas y plantas industriales. Cotización exacta sin sorpresas en menos de 10 minutos y visita en el mismo día.
+              Técnicos certificados para residencias, oficinas e industrias. Presupuesto transparente sin costos ocultos y visita técnica en el mismo día.
             </p>
 
             {/* CTAs */}
-            <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4">
+            <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
               <a
                 href={dynamicWaLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-2xl font-bold text-sm sm:text-base bg-emerald-400 hover:bg-emerald-300 text-slate-950 shadow-xl shadow-emerald-500/25 transition-all transform hover:scale-105"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full font-bold text-sm sm:text-base bg-emerald-400 hover:bg-emerald-300 text-slate-950 shadow-[0_0_30px_rgba(16,185,129,0.35)] transition-all transform hover:scale-105"
               >
                 <MessageCircle className="w-5 h-5 fill-slate-950" />
                 <span>Solicitar Técnico por WhatsApp</span>
@@ -124,15 +122,15 @@ export default function DemoServiciosTecnicosPage() {
 
               <a
                 href="#servicios"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-2xl font-semibold text-xs sm:text-sm text-slate-300 hover:text-white bg-slate-900/80 hover:bg-slate-800 border border-slate-800 transition"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full font-semibold text-xs sm:text-sm text-slate-300 hover:text-white bg-white/[0.03] hover:bg-white/[0.07] border border-white/10 backdrop-blur-xl transition"
               >
                 <span>Ver Servicios</span>
                 <ChevronRight className="w-4 h-4" />
               </a>
             </div>
 
-            {/* Trust Badges */}
-            <div className="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs text-slate-400 border-t border-amber-950">
+            {/* Trust Seals */}
+            <div className="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs text-slate-400 border-t border-white/[0.06]">
               <div className="flex items-center gap-1.5 text-amber-400">
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
@@ -142,66 +140,68 @@ export default function DemoServiciosTecnicosPage() {
                 <span className="font-bold text-white ml-1">4.9 / 5.0</span>
               </div>
               <span>•</span>
-              <span>+4,500 Equipos Reparados</span>
+              <span>+4,500 Equipos Atendidos</span>
               <span>•</span>
-              <span className="text-emerald-400 font-semibold">✓ Facturación Electrónica</span>
+              <span className="text-emerald-400 font-semibold">✓ Factura Electrónica</span>
             </div>
           </div>
 
-          {/* Right Hero Column: Instant Service Estimator Card */}
-          <div className="lg:col-span-5" id="estimador">
-            <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-b from-[#1C1408] to-[#100B04] border border-amber-500/30 shadow-2xl space-y-5 relative overflow-hidden backdrop-blur-xl">
-              <div className="flex items-center justify-between border-b border-amber-950 pb-4">
+          {/* Right Column: Floating Service Dispatch Pod */}
+          <div className="lg:col-span-5" id="cotizador">
+            <div className="p-7 sm:p-9 rounded-[2.5rem] bg-gradient-to-b from-white/[0.06] to-white/[0.02] border border-white/[0.1] shadow-[0_30px_90px_rgba(0,0,0,0.6)] backdrop-blur-2xl space-y-6 relative overflow-hidden ring-1 ring-white/[0.05]">
+              <div className="absolute -top-10 -right-10 w-40 h-40 bg-orange-500/15 rounded-full blur-3xl pointer-events-none" />
+
+              <div className="flex items-center justify-between border-b border-white/[0.08] pb-4">
                 <div>
-                  <span className="text-[10px] font-bold text-amber-400 uppercase tracking-wider block">
+                  <span className="text-[10px] font-bold text-amber-400 uppercase tracking-widest block">
                     DESPACHO INMEDIATO
                   </span>
-                  <h3 className="text-base sm:text-lg font-bold text-white">
-                    Cotizador de Servicio Técnico
+                  <h3 className="text-lg font-bold text-white">
+                    Cotizador de Asistencia Técnica
                   </h3>
                 </div>
-                <div className="w-8 h-8 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400">
+                <div className="w-9 h-9 rounded-full bg-amber-400/10 border border-amber-400/30 flex items-center justify-center text-amber-400">
                   <Wrench className="w-4 h-4" />
                 </div>
               </div>
 
               <div className="space-y-3">
                 <label className="text-xs font-semibold text-slate-300 block">
-                  1. Selecciona el tipo de trabajo:
+                  1. ¿Qué servicio técnico necesitas?
                 </label>
                 
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-2 gap-2.5">
                   {[
                     { id: "mantenimiento", label: "Mantenimiento", icon: "🧰" },
-                    { id: "instalacion", label: "Instalación Split", icon: "❄️" },
-                    { id: "reparacion", label: "Reparación Urgente", icon: "⚡" },
+                    { id: "instalacion", label: "Instalación", icon: "❄️" },
+                    { id: "reparacion", label: "Reparación 24h", icon: "⚡" },
                     { id: "b2b", label: "Contrato B2B", icon: "🏢" },
                   ].map((tab) => (
                     <button
                       key={tab.id}
                       type="button"
                       onClick={() => setSelectedService(tab.id)}
-                      className={`p-3 rounded-xl text-left text-xs font-medium transition-all flex items-center gap-2 border ${
+                      className={`p-3.5 rounded-2xl text-left text-xs font-medium transition-all flex items-center gap-2.5 border ${
                         selectedService === tab.id
-                          ? "bg-amber-400 text-slate-950 font-bold border-amber-400 shadow-md shadow-amber-400/20"
-                          : "bg-slate-950/60 text-slate-300 border-amber-950 hover:border-amber-500/30"
+                          ? "bg-amber-400 text-slate-950 font-bold border-amber-300 shadow-[0_0_20px_rgba(245,158,11,0.4)] scale-102"
+                          : "bg-white/[0.02] text-slate-300 border-white/[0.06] hover:bg-white/[0.05]"
                       }`}
                     >
-                      <span>{tab.icon}</span>
+                      <span className="text-base">{tab.icon}</span>
                       <span>{tab.label}</span>
                     </button>
                   ))}
                 </div>
               </div>
 
-              <div className="p-4 rounded-2xl bg-slate-950/80 border border-amber-950 space-y-2 text-xs">
+              <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/[0.06] space-y-2 text-xs">
                 <div className="flex items-center justify-between text-slate-400">
-                  <span>Diagnóstico y presupuesto:</span>
+                  <span>Diagnóstico técnico:</span>
                   <span className="font-bold text-emerald-400">Sin Compromiso</span>
                 </div>
                 <div className="flex items-center justify-between text-slate-400">
-                  <span>Tiempo de llegada estimado:</span>
-                  <span className="font-bold text-white">45 a 60 minutos</span>
+                  <span>Tiempo de llegada:</span>
+                  <span className="font-bold text-white">45 a 60 min</span>
                 </div>
               </div>
 
@@ -209,7 +209,7 @@ export default function DemoServiciosTecnicosPage() {
                 href={dynamicWaLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl font-bold text-xs sm:text-sm bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-300 hover:to-orange-400 text-slate-950 shadow-lg shadow-amber-500/20 transition-all text-center"
+                className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full font-bold text-xs sm:text-sm bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-300 hover:to-orange-400 text-slate-950 shadow-[0_0_25px_rgba(245,158,11,0.3)] transition-all text-center transform hover:scale-102"
               >
                 <span>Pedir Visita Técnica por WhatsApp</span>
                 <ArrowRight className="w-4 h-4" />
@@ -217,154 +217,103 @@ export default function DemoServiciosTecnicosPage() {
 
               <p className="text-[10px] text-center text-slate-400 flex items-center justify-center gap-1">
                 <ShieldCheck className="w-3 h-3 text-amber-400" />
-                <span>100% de repuestos y piezas originales garantizadas.</span>
+                <span>Repuestos originales y técnicos calificados.</span>
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Bento Grid: Technical Services */}
+      {/* Floating Technical Services Showcase */}
       <section id="servicios" className="py-16 px-4 sm:px-6 max-w-6xl mx-auto space-y-12">
         <div className="text-center space-y-3 max-w-2xl mx-auto">
           <span className="text-xs font-bold text-amber-400 uppercase tracking-widest">
-            SOLUCIONES INTEGRALES
+            SOLUCIONES ESPECIALIZADAS
           </span>
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-white">
-            Especialidades Técnicas & Climatización
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+            Servicios de Climatización & Obras
           </h2>
           <p className="text-xs sm:text-base text-slate-400">
-            Cobertura residencial, comercial e industrial para todas las marcas del mercado.
+            Trabajamos con todas las marcas: LG, Daikin, Carrier, York, Samsung, Midea y más.
           </p>
         </div>
 
-        {/* Bento Grid Container */}
+        {/* Dynamic Glass Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Card 1 (Large - Featured) */}
-          <div className="md:col-span-2 p-8 rounded-3xl bg-gradient-to-br from-[#1E1508] via-[#150E05] to-[#0D0803] border border-amber-950 hover:border-amber-500/40 transition-all duration-300 flex flex-col justify-between group">
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <span className="text-3xl">❄️</span>
-                <span className="text-xs font-bold px-3 py-1 rounded-full bg-amber-500/15 text-amber-300 border border-amber-500/30">
-                  Servicio Estrella
-                </span>
+          {[
+            {
+              icon: "❄️",
+              title: "Instalación de Aire Acondicionado",
+              desc: "Montaje Split, Ducto y VRF con sellado hermético y prueba de vacío computarizada.",
+              badge: "Servicio Estrella"
+            },
+            {
+              icon: "🧰",
+              title: "Mantenimiento Químico & Limpieza",
+              desc: "Lavado con vapor a presión, eliminación de bacterias, recarga de gas ecológico y turbinas.",
+              badge: "Ahorra 30% Luz"
+            },
+            {
+              icon: "⚡",
+              title: "Reparación de Fugas & Placas",
+              desc: "Diagnóstico de errores en tarjetas inverter, cambio de compresores y corrección de goteos.",
+              badge: "Urgencias 24h"
+            },
+            {
+              icon: "🏢",
+              title: "Planes Mensuales B2B",
+              desc: "Contratos de mantenimiento preventivo para oficinas, restaurantes y locales comerciales.",
+              badge: "Corporativo"
+            },
+            {
+              icon: "🌪️",
+              title: "Ventilación & Extracción de Aire",
+              desc: "Inyección de aire limpio y campanas extractoras industriales de acero inoxidable.",
+              badge: "Industrial"
+            },
+            {
+              icon: "🔌",
+              title: "Tableros Eléctricos & Pozos a Tierra",
+              desc: "Instalaciones eléctricas seguras con certificación de pozo a tierra y llaves independientes.",
+              badge: "Seguridad"
+            }
+          ].map((item, idx) => (
+            <div
+              key={idx}
+              className="p-8 rounded-[2rem] bg-gradient-to-b from-white/[0.04] to-white/[0.01] border border-white/[0.08] hover:border-amber-500/40 backdrop-blur-xl transition-all duration-300 group hover:-translate-y-1 space-y-4 flex flex-col justify-between"
+            >
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <span className="text-3xl p-3 rounded-2xl bg-white/[0.04] border border-white/[0.08]">
+                    {item.icon}
+                  </span>
+                  <span className="text-[10px] font-bold px-3 py-1 rounded-full bg-white/[0.03] text-amber-300 border border-white/[0.06]">
+                    {item.badge}
+                  </span>
+                </div>
+
+                <h3 className="text-lg font-bold text-white group-hover:text-amber-300 transition-colors">
+                  {item.title}
+                </h3>
+
+                <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                  {item.desc}
+                </p>
               </div>
 
-              <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-amber-300 transition">
-                Instalación de Aire Acondicionado Split, Ducto & VRF
-              </h3>
-
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-xl">
-                Montaje certificado con sellado hermético, prueba de vacío computarizada y aislamiento térmico de alta densidad para máxima eficiencia y bajo consumo de luz.
-              </p>
-            </div>
-
-            <div className="mt-8 pt-6 border-t border-amber-950 flex flex-wrap items-center justify-between gap-4">
-              <div className="flex items-center gap-6 text-xs text-slate-400">
-                <span>✓ Mano de obra certificada</span>
-                <span>✓ 12 meses de garantía</span>
-                <span>✓ Prueba de carga</span>
+              <div className="pt-4 border-t border-white/[0.06] flex items-center justify-between">
+                <span className="text-[11px] text-amber-400/90 font-medium">Cotización en el acto</span>
+                <a
+                  href={dynamicWaLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-bold text-white hover:text-amber-300 flex items-center gap-1"
+                >
+                  Pedir Técnico →
+                </a>
               </div>
-              <a
-                href={dynamicWaLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs font-bold text-amber-400 hover:text-amber-300 flex items-center gap-1"
-              >
-                Solicitar Cotización →
-              </a>
             </div>
-          </div>
-
-          {/* Card 2 */}
-          <div className="p-8 rounded-3xl bg-gradient-to-br from-[#1A1207] to-[#0F0A04] border border-amber-950 hover:border-amber-500/40 transition-all duration-300 flex flex-col justify-between group">
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <span className="text-3xl">🧰</span>
-                <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300">
-                  Preventivo
-                </span>
-              </div>
-
-              <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-amber-300 transition">
-                Mantenimiento Químico & Limpieza
-              </h3>
-
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                Desinfección con vapor antibacteriano, eliminación de hongos, limpieza de turbinas y recarga de gas ecológico.
-              </p>
-            </div>
-
-            <div className="mt-6 pt-4 border-t border-amber-950">
-              <span className="text-xs font-bold text-emerald-400">Ahorra hasta 30% en consumo eléctrico</span>
-            </div>
-          </div>
-
-          {/* Card 3 */}
-          <div className="p-8 rounded-3xl bg-gradient-to-br from-[#1A1207] to-[#0F0A04] border border-amber-950 hover:border-amber-500/40 transition-all duration-300 flex flex-col justify-between group">
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <span className="text-3xl">⚡</span>
-                <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300">
-                  Urgencias 24h
-                </span>
-              </div>
-
-              <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-amber-300 transition">
-                Reparación de Fugas & Compresores
-              </h3>
-
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                Diagnóstico de placas electrónicas inverter, goteos de agua y reemplazo de condensadores quemados.
-              </p>
-            </div>
-
-            <div className="mt-6 pt-4 border-t border-amber-950">
-              <span className="text-xs font-bold text-slate-400">Llegada en 45 min</span>
-            </div>
-          </div>
-
-          {/* Card 4 */}
-          <div className="p-8 rounded-3xl bg-gradient-to-br from-[#1A1207] to-[#0F0A04] border border-amber-950 hover:border-amber-500/40 transition-all duration-300 flex flex-col justify-between group">
-            <div className="space-y-4">
-              <div className="p-3.5 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-400 w-fit">
-                <Building className="w-6 h-6" />
-              </div>
-
-              <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-amber-300 transition">
-                Contratos Mensuales B2B
-              </h3>
-
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                Planes corporativos para oficinas, restaurantes y cadenas comerciales con atención prioritaria 24/7.
-              </p>
-            </div>
-
-            <div className="mt-6 pt-4 border-t border-amber-950">
-              <span className="text-xs font-bold text-slate-400">Facturación mensual y reportes</span>
-            </div>
-          </div>
-
-          {/* Card 5 */}
-          <div className="p-8 rounded-3xl bg-gradient-to-br from-[#1A1207] to-[#0F0A04] border border-amber-950 hover:border-amber-500/40 transition-all duration-300 flex flex-col justify-between group">
-            <div className="space-y-4">
-              <div className="p-3.5 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-400 w-fit">
-                <Zap className="w-6 h-6" />
-              </div>
-
-              <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-amber-300 transition">
-                Instalaciones Eléctricas & Tableros
-              </h3>
-
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                Balanceo de cargas, llaves termomagnéticas independientes y pozos a tierra con protocolo de prueba.
-              </p>
-            </div>
-
-            <div className="mt-6 pt-4 border-t border-amber-950">
-              <span className="text-xs font-bold text-slate-400">Certificación técnica oficial</span>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 

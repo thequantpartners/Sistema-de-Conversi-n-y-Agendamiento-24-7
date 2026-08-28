@@ -12,20 +12,21 @@ import {
   ShieldCheck, 
   Zap, 
   Star,
-  ExternalLink,
   ChevronRight,
-  TrendingUp
+  Flame,
+  Layers,
+  ArrowUpRight
 } from "lucide-react";
 
 export function PortfolioHub() {
   const [selectedTag, setSelectedTag] = useState<string>("Todos");
 
   const filterTabs = [
-    { label: "Todos los Diseños", key: "Todos" },
-    { label: "⚖️ Legal & Consultoría", key: "B2B / Legal" },
-    { label: "🩺 Salud & Estética", key: "Salud" },
-    { label: "🛠️ Servicios Técnicos", key: "Servicios Técnicos" },
-    { label: "🎓 Academias & Negocios", key: "Educación & Locales" },
+    { label: "Todos los Diseños", key: "Todos", icon: "✨" },
+    { label: "Legal & B2B", key: "B2B / Legal", icon: "⚖️" },
+    { label: "Salud & Estética", key: "Salud", icon: "🩺" },
+    { label: "Servicios Técnicos", key: "Servicios Técnicos", icon: "🛠️" },
+    { label: "Academias & Cursos", key: "Educación & Locales", icon: "🎓" },
   ];
 
   const filteredDemos = selectedTag === "Todos" 
@@ -39,150 +40,159 @@ export function PortfolioHub() {
       });
 
   const generalWaLink = getWhatsAppLink(
-    `Hola, estuve revisando el portafolio de demos y quiero solicitar mi página web personalizada por ${PROMO_PRICE}.`
+    `Hola, estuve revisando el portafolio de landing pages y quiero solicitar mi diseño personalizado por ${PROMO_PRICE}.`
   );
 
   return (
-    <div className="min-h-screen bg-[#07090E] text-slate-100 font-sans selection:bg-emerald-500 selection:text-black pb-28 relative overflow-hidden">
-      {/* Dynamic Ambient Mesh Glows (Dribbble Style) */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[550px] bg-gradient-to-b from-blue-600/15 via-emerald-500/10 to-transparent blur-[140px] pointer-events-none -z-10" />
-      <div className="absolute top-[40%] right-[-10%] w-[500px] h-[500px] bg-purple-600/10 blur-[130px] pointer-events-none -z-10" />
-      <div className="absolute bottom-[10%] left-[-10%] w-[500px] h-[500px] bg-emerald-600/10 blur-[130px] pointer-events-none -z-10" />
+    <div className="min-h-screen bg-[#05070B] text-slate-100 font-sans selection:bg-emerald-400 selection:text-slate-950 pb-36 relative overflow-hidden">
+      
+      {/* 🔮 Atmospheric Multi-Layered Mesh & Conic Glows */}
+      <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[1200px] h-[650px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-emerald-500/20 via-indigo-600/15 to-transparent blur-[160px] pointer-events-none -z-10" />
+      <div className="absolute top-[35%] -left-40 w-[600px] h-[600px] bg-purple-600/10 blur-[180px] pointer-events-none -z-10" />
+      <div className="absolute top-[60%] -right-40 w-[600px] h-[600px] bg-emerald-500/10 blur-[180px] pointer-events-none -z-10" />
 
-      {/* Grid Pattern Overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none -z-10" />
-
-      <main className="max-w-5xl mx-auto px-4 sm:px-6 pt-12 sm:pt-20">
-        {/* Top Floating Badge */}
-        <header className="text-center space-y-5 max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/90 border border-slate-800 backdrop-blur-md shadow-2xl">
-            <span className="flex h-2 w-2 relative">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-            </span>
-            <span className="text-xs font-semibold tracking-wide text-slate-300 uppercase">
-              Showcase Interactivo • Quant Partners
+      {/* Floating Modern Header Pill */}
+      <nav className="sticky top-5 z-40 max-w-4xl mx-auto px-4">
+        <div className="flex items-center justify-between px-5 py-3 rounded-full bg-slate-950/60 border border-white/[0.08] backdrop-blur-2xl shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
+          <div className="flex items-center gap-2.5">
+            <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-emerald-400 to-cyan-400 flex items-center justify-center font-black text-slate-950 text-xs shadow-[0_0_15px_rgba(16,185,129,0.4)]">
+              Q
+            </div>
+            <span className="font-extrabold text-sm tracking-tight text-white">
+              QUANT<span className="text-emerald-400 font-light ml-1">PARTNERS</span>
             </span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.15]">
-            Explora Demos Creadas para{" "}
-            <span className="bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400 bg-clip-text text-transparent">
-              Convertir Visitas en Ventas
+          <div className="hidden sm:flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.03] border border-white/[0.06] text-[11px] text-slate-300">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+            <span>4 Demos Interactivas en Vivo</span>
+          </div>
+
+          <a
+            href={generalWaLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-bold text-slate-950 bg-gradient-to-r from-emerald-400 to-teal-300 hover:from-emerald-300 hover:to-teal-200 shadow-[0_0_20px_rgba(16,185,129,0.3)] transition-all transform hover:scale-105 active:scale-95"
+          >
+            <span>Cotizar ({PROMO_PRICE})</span>
+            <ArrowRight className="w-3.5 h-3.5" />
+          </a>
+        </div>
+      </nav>
+
+      <main className="max-w-5xl mx-auto px-4 sm:px-6 pt-12 sm:pt-20 space-y-16">
+        
+        {/* ✨ Modern Non-Block Hero Section */}
+        <section className="text-center space-y-6 max-w-3xl mx-auto relative">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-emerald-500/10 via-white/[0.04] to-blue-500/10 border border-emerald-500/30 backdrop-blur-xl shadow-2xl">
+            <Sparkles className="w-3.5 h-3.5 text-emerald-400 animate-pulse" />
+            <span className="text-xs font-semibold text-emerald-300 tracking-wide">
+              Landing Pages de Alta Conversión • Sin Plantillas Rellenas
+            </span>
+          </div>
+
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.08]">
+            Tu Próxima Landing Page Diseñada para{" "}
+            <span className="bg-gradient-to-r from-emerald-300 via-teal-200 to-cyan-400 bg-clip-text text-transparent drop-shadow-[0_0_35px_rgba(16,185,129,0.25)]">
+              Vender Todos los Días.
             </span>
           </h1>
 
           <p className="text-sm sm:text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
-            Páginas web profesionales diseñadas a medida, ultra-rápidas y con botón directo a WhatsApp. Elige tu rubro para probar la experiencia en vivo.
+            Eliminamos webs lentas y folletos estáticos. Construimos páginas de aterrizaje con conexión instantánea a WhatsApp, 100% autoadministrables y llave en mano.
           </p>
 
-          {/* Dribbble Style Pricing Pill Card */}
+          {/* Floating Price Capsule (Linear Design Style) */}
           <div className="pt-2">
-            <div className="inline-flex flex-col sm:flex-row items-center gap-3 sm:gap-6 p-2 sm:p-2.5 sm:pr-6 rounded-3xl bg-slate-900/90 border border-emerald-500/30 backdrop-blur-xl shadow-2xl shadow-emerald-500/10">
-              <div className="flex items-center gap-2.5 px-4 py-1.5 rounded-2xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 font-bold text-xs sm:text-sm">
-                <Sparkles className="w-4 h-4 text-emerald-400 animate-pulse" />
-                <span>OFERTA DE LANZAMIENTO</span>
-              </div>
-              
-              <div className="flex items-center gap-3 text-center sm:text-left">
-                <span className="text-xs sm:text-sm text-slate-500 line-through">
-                  Antes {REGULAR_PRICE}
-                </span>
-                <span className="text-xl sm:text-2xl font-extrabold text-white tracking-tight">
-                  {PROMO_PRICE}{" "}
-                  <span className="text-xs font-normal text-emerald-400">/ Pago Único</span>
+            <div className="inline-flex flex-wrap items-center justify-center gap-3 sm:gap-6 px-6 py-3 rounded-full bg-white/[0.02] border border-white/[0.08] backdrop-blur-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] ring-1 ring-white/[0.05]">
+              <span className="text-xs text-slate-500 line-through">Precio Regular {REGULAR_PRICE}</span>
+              <div className="flex items-center gap-1.5">
+                <span className="text-xl sm:text-2xl font-black text-white">{PROMO_PRICE}</span>
+                <span className="text-xs font-bold text-emerald-400 px-2 py-0.5 rounded-md bg-emerald-500/10 border border-emerald-500/20">
+                  PAGO ÚNICO
                 </span>
               </div>
-
-              <div className="hidden md:flex items-center gap-2 text-xs text-slate-400 pl-4 border-l border-slate-800">
+              <div className="hidden md:flex items-center gap-2 text-xs text-slate-400 pl-4 border-l border-white/10">
                 <Zap className="w-3.5 h-3.5 text-amber-400" />
-                <span>Entrega en 5 días • Sin mensualidades</span>
+                <span>Lista en 5 Días • Sin mensualidades</span>
               </div>
             </div>
           </div>
-        </header>
+        </section>
 
-        {/* Filter Navigation Tabs (Dribbble Glass Pill Style) */}
-        <div className="flex items-center justify-center gap-2 sm:gap-3 overflow-x-auto py-10 no-scrollbar">
+        {/* 🎛️ Organic Filter Pills */}
+        <div className="flex items-center justify-center gap-2 sm:gap-3 overflow-x-auto py-2 no-scrollbar">
           {filterTabs.map((tab) => (
             <button
               key={tab.key}
               onClick={() => setSelectedTag(tab.key)}
-              className={`px-4 sm:px-5 py-2.5 rounded-2xl text-xs sm:text-sm font-semibold transition-all duration-200 whitespace-nowrap flex items-center gap-2 ${
+              className={`px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 whitespace-nowrap flex items-center gap-2 border ${
                 selectedTag === tab.key
-                  ? "bg-white text-slate-950 shadow-lg shadow-white/10 scale-105"
-                  : "bg-slate-900/80 text-slate-400 hover:text-white hover:bg-slate-800/90 border border-slate-800"
+                  ? "bg-white text-slate-950 border-white shadow-[0_0_25px_rgba(255,255,255,0.25)] scale-105"
+                  : "bg-white/[0.02] text-slate-400 hover:text-white hover:bg-white/[0.05] border-white/[0.06] backdrop-blur-lg"
               }`}
             >
-              {tab.label}
+              <span>{tab.icon}</span>
+              <span>{tab.label}</span>
             </button>
           ))}
         </div>
 
-        {/* Demos Cards Grid - Dribbble High-End UI Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+        {/* 🚀 Dynamic Floating Showcase Cards (Zero Boring Blocks) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {filteredDemos.map((demo) => (
             <div
               key={demo.id}
-              className="group relative rounded-3xl bg-gradient-to-b from-slate-900/90 to-slate-950/90 border border-slate-800/80 hover:border-slate-700 transition-all duration-300 overflow-hidden flex flex-col justify-between hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-1"
+              className="group relative rounded-[2.5rem] bg-gradient-to-b from-white/[0.04] to-white/[0.01] border border-white/[0.08] hover:border-emerald-500/40 backdrop-blur-2xl p-7 sm:p-9 transition-all duration-500 flex flex-col justify-between hover:shadow-[0_20px_60px_-15px_rgba(16,185,129,0.15)] hover:-translate-y-1.5 overflow-hidden"
             >
-              {/* Card Header & Mockup Preview Frame */}
-              <div className="p-6 sm:p-7 space-y-4">
-                {/* Browser-like Window Header Mockup */}
-                <div className="rounded-2xl bg-slate-950/80 border border-slate-800 p-3.5 space-y-3 shadow-inner group-hover:border-slate-700 transition">
-                  <div className="flex items-center justify-between border-b border-slate-850 pb-2.5">
-                    <div className="flex items-center gap-1.5">
-                      <div className="w-2.5 h-2.5 rounded-full bg-rose-500/80" />
-                      <div className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
-                      <div className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
+              {/* Inner ambient light orb on card */}
+              <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none group-hover:bg-emerald-500/15 transition-all duration-500" />
+
+              <div className="space-y-6 relative z-10">
+                
+                {/* Floating Capsule Badge Header */}
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <span className="text-3xl p-3 rounded-2xl bg-white/[0.04] border border-white/[0.08] shadow-inner">
+                      {demo.icon}
+                    </span>
+                    <div>
+                      <span className="text-[10px] font-bold text-emerald-400 tracking-widest uppercase block">
+                        {demo.niche}
+                      </span>
+                      <h2 className="text-lg sm:text-xl font-extrabold text-white group-hover:text-emerald-300 transition-colors">
+                        {demo.title}
+                      </h2>
                     </div>
-                    <span className="text-[10px] font-mono text-slate-500 tracking-wider">
-                      demo/{demo.slug}
-                    </span>
-                    <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-800 text-emerald-400 border border-slate-700">
-                      LIVE
-                    </span>
                   </div>
 
-                  {/* Visual Content Teaser */}
-                  <div className="py-4 px-3 rounded-xl bg-slate-900/90 border border-slate-800/50 flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <div className="text-3xl p-2 rounded-xl bg-slate-800/90 border border-slate-700/60 shadow-sm">
-                        {demo.icon}
-                      </div>
-                      <div>
-                        <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-widest block">
-                          {demo.niche}
-                        </span>
-                        <h3 className="text-base font-bold text-white group-hover:text-emerald-300 transition line-clamp-1">
-                          {demo.title}
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
+                  <span className="hidden sm:inline-flex text-[10px] font-bold px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">
+                    {demo.badge}
+                  </span>
                 </div>
 
-                {/* Description */}
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
                   {demo.shortDescription}
                 </p>
 
-                {/* Features Checkpoints */}
-                <div className="space-y-2 pt-1 border-t border-slate-850">
-                  {demo.features.slice(0, 3).map((feat, i) => (
-                    <div key={i} className="flex items-center gap-2 text-xs text-slate-400">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                {/* Micro Features Flow (Non-block Pills) */}
+                <div className="space-y-2.5 pt-2">
+                  {demo.features.map((feat, i) => (
+                    <div key={i} className="flex items-center gap-2.5 text-xs text-slate-400 group-hover:text-slate-200 transition">
+                      <div className="w-4 h-4 rounded-full bg-emerald-500/15 flex items-center justify-center shrink-0 border border-emerald-500/30">
+                        <CheckCircle2 className="w-3 h-3 text-emerald-400" />
+                      </div>
                       <span>{feat}</span>
                     </div>
                   ))}
                 </div>
 
-                {/* Tags */}
+                {/* Sub-niche Tags */}
                 <div className="flex flex-wrap gap-1.5 pt-2">
                   {demo.tags.map((tag, i) => (
                     <span
                       key={i}
-                      className="text-[10px] font-medium px-2.5 py-1 rounded-lg bg-slate-800/60 text-slate-300 border border-slate-700/40"
+                      className="text-[10px] font-medium px-3 py-1 rounded-full bg-white/[0.03] text-slate-400 border border-white/[0.05]"
                     >
                       {tag}
                     </span>
@@ -190,44 +200,44 @@ export function PortfolioHub() {
                 </div>
               </div>
 
-              {/* Card Footer Actions */}
-              <div className="p-6 pt-0 sm:p-7 sm:pt-0 mt-auto flex flex-col sm:flex-row items-center gap-3">
+              {/* Action Buttons */}
+              <div className="pt-8 mt-6 border-t border-white/[0.06] flex flex-col sm:flex-row items-center gap-3 relative z-10">
                 <Link
                   href={`/demos/${demo.slug}`}
-                  className="w-full sm:flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl font-bold text-xs sm:text-sm text-white bg-blue-600 hover:bg-blue-500 shadow-lg shadow-blue-600/25 transition-all text-center group-hover:scale-[1.02]"
+                  className="w-full sm:flex-1 inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full font-bold text-xs sm:text-sm text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 shadow-[0_0_25px_rgba(59,130,246,0.3)] transition-all group-hover:scale-[1.02] text-center"
                 >
                   <Eye className="w-4 h-4" />
-                  <span>Ver Demo en Vivo</span>
-                  <ChevronRight className="w-3.5 h-3.5 ml-auto" />
+                  <span>Probar Landing en Vivo</span>
+                  <ArrowUpRight className="w-4 h-4 ml-auto" />
                 </Link>
 
                 <a
                   href={getWhatsAppLink(demo.whatsAppMessage)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-3 rounded-2xl font-semibold text-xs text-emerald-300 hover:text-white bg-emerald-950/50 hover:bg-emerald-900/60 border border-emerald-500/30 transition text-center"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full font-semibold text-xs text-emerald-300 hover:text-white bg-emerald-950/40 hover:bg-emerald-900/60 border border-emerald-500/30 transition text-center"
                 >
                   <MessageCircle className="w-4 h-4 text-emerald-400" />
-                  <span>Pedir este ({PROMO_PRICE})</span>
+                  <span>Pedir ({PROMO_PRICE})</span>
                 </a>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Global Bottom High-Converting Banner */}
-        <section className="mt-16 sm:mt-20 p-8 sm:p-12 rounded-3xl bg-gradient-to-b from-slate-900/90 via-slate-900 to-slate-950 border border-slate-800 shadow-2xl relative overflow-hidden text-center space-y-6">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-xs font-semibold">
+        {/* 🌟 Atmospheric Footer Conversion Pod */}
+        <section className="rounded-[3rem] bg-gradient-to-b from-white/[0.05] to-transparent border border-white/[0.08] p-8 sm:p-14 backdrop-blur-2xl text-center space-y-6 relative overflow-hidden shadow-[0_30px_100px_rgba(0,0,0,0.6)]">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-xs font-semibold">
             <ShieldCheck className="w-4 h-4" />
-            <span>Garantía de Satisfacción & Entrega en 5 Días</span>
+            <span>Garantía de Satisfacción Total • Pago en 2 Partes (50/50)</span>
           </div>
 
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight max-w-xl mx-auto">
-            ¿Tu negocio pertenece a otro rubro o requieres funciones especiales?
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight max-w-xl mx-auto leading-tight">
+            ¿Necesitas una Landing Page para un rubro diferente?
           </h2>
 
           <p className="text-xs sm:text-base text-slate-400 max-w-lg mx-auto leading-relaxed">
-            Diseñamos cualquier tipo de web para tu modelo de negocio manteniendo la tarifa plana de {PROMO_PRICE} en pago único.
+            Personalizamos la estructura, textos y colores de tu negocio para que empieces a captar clientes esta misma semana por solo {PROMO_PRICE}.
           </p>
 
           <div className="pt-2">
@@ -235,14 +245,15 @@ export function PortfolioHub() {
               href={generalWaLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl font-bold text-sm sm:text-base text-slate-950 bg-emerald-400 hover:bg-emerald-300 shadow-xl shadow-emerald-500/25 transition-all transform hover:scale-105 active:scale-95"
+              className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full font-extrabold text-sm sm:text-base text-slate-950 bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-300 hover:from-emerald-300 hover:to-cyan-200 shadow-[0_0_35px_rgba(16,185,129,0.4)] transition-all transform hover:scale-105 active:scale-95"
             >
               <MessageCircle className="w-5 h-5 fill-slate-950" />
-              <span>Chatear con un Especialista por WhatsApp</span>
+              <span>Chatear Directo por WhatsApp con un Especialista</span>
               <ArrowRight className="w-4 h-4" />
             </a>
           </div>
         </section>
+
       </main>
     </div>
   );
