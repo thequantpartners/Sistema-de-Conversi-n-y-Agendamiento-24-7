@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 import { DemoStickyBar } from "@/core/components/demos/demo-sticky-bar";
 import { DemoFloatingWhatsApp } from "@/core/components/demos/demo-floating-whatsapp";
 import { DEMO_NICHES, getWhatsAppLink, PROMO_PRICE } from "@/core/data/portfolio-demos";
@@ -22,8 +21,7 @@ import {
   Lock, 
   Sparkles, 
   PhoneCall,
-  Award,
-  ArrowUpRight
+  Award
 } from "lucide-react";
 
 export default function DemoServiciosProfesionalesPage() {
@@ -43,46 +41,44 @@ export default function DemoServiciosProfesionalesPage() {
     <div className="min-h-screen bg-[#070605] text-slate-100 font-sans pb-36 relative selection:bg-[#C5A880] selection:text-slate-950">
       
       {/* Top Demo Banner */}
-      <div className="py-2 px-4 bg-black/80 border-b border-white/[0.08] backdrop-blur-xl text-center text-xs flex flex-wrap items-center justify-center gap-2 relative z-50">
+      <div className="py-2 px-4 bg-black/90 border-b border-white/[0.08] backdrop-blur-xl text-center text-xs flex flex-wrap items-center justify-center gap-2 relative z-50">
         <span className="px-2.5 py-0.5 rounded-full bg-[#C5A880]/20 text-[#DFC39C] font-bold border border-[#C5A880]/40 text-[10px] uppercase tracking-wider">
           LANDING PAGE DEMO
         </span>
         <span className="text-slate-300">
-          Diseño Editorial & Cinematográfico para <strong>Abogados, Firmas Legales y Consultoras de Prestigio</strong>
+          Diseño Editorial & Cinematográfico para <strong>Abogados, Firmas Legales y Consultoras B2B</strong>
         </span>
       </div>
 
       {/* 🏛️ CINEMATIC HERO SECTION (Replica Exacta del Diseño de Referencia) */}
-      <section className="relative min-h-[92vh] sm:min-h-screen flex flex-col justify-between overflow-hidden">
+      <section className="relative min-h-[85vh] lg:min-h-[90vh] flex flex-col justify-between overflow-hidden bg-[#070605]">
         
-        {/* Background Image Layer */}
-        <div className="absolute inset-0 -z-10">
-          <Image
+        {/* Background Image Layer (Vibrant, Crystal Clear, No Over-Darkening) */}
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <img
             src="/images/lawyer-hero.png"
             alt="Brian Anderson - Legal Counsel"
-            fill
-            priority
-            className="object-cover object-center sm:object-top brightness-90"
+            className="w-full h-full object-cover object-top filter contrast-[1.05]"
           />
-          {/* Subtle Ambient Gradients for Perfect Typographic Contrast */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#070605] via-black/30 to-black/60 pointer-events-none" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/20 to-black/60 pointer-events-none" />
+          {/* Gentle cinematic vignette that preserves the central lawyer and library */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#070605] via-transparent to-black/50 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/50 pointer-events-none" />
         </div>
 
         {/* Minimalist Editorial Navigation */}
-        <header className="w-full px-6 sm:px-12 py-6 sm:py-8 flex items-center justify-between relative z-20">
+        <header className="w-full px-6 sm:px-12 py-5 sm:py-7 flex items-center justify-between relative z-20">
           {/* Brand Name */}
           <div className="flex flex-col">
-            <span className="font-serif text-2xl sm:text-3xl font-medium tracking-tight text-white leading-none">
+            <span className="font-serif text-2xl sm:text-3xl font-medium tracking-tight text-white leading-none drop-shadow-md">
               Brian Anderson
             </span>
-            <span className="text-[9px] uppercase tracking-[0.25em] text-[#C5A880] font-sans mt-1">
+            <span className="text-[9px] uppercase tracking-[0.25em] text-[#DFC39C] font-sans mt-1 drop-shadow">
               Attorney & Legal Counsel
             </span>
           </div>
 
           {/* Center Nav Links (Desktop) */}
-          <nav className="hidden md:flex items-center gap-8 text-xs sm:text-sm font-light text-slate-300 tracking-wide">
+          <nav className="hidden md:flex items-center gap-8 text-xs sm:text-sm font-light text-slate-200 tracking-wide drop-shadow-sm">
             <a href="#about" className="hover:text-white transition-colors">About</a>
             <a href="#practice-areas" className="hover:text-white transition-colors">Practice Areas</a>
             <a href="#case-studies" className="hover:text-white transition-colors">Case Studies</a>
@@ -95,58 +91,58 @@ export default function DemoServiciosProfesionalesPage() {
             href={dynamicWaLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 sm:px-5 py-2 sm:py-2.5 rounded-sm text-xs sm:text-sm font-light text-slate-100 border border-white/30 hover:border-[#C5A880] hover:text-[#DFC39C] backdrop-blur-sm transition-all duration-300 flex items-center gap-2"
+            className="px-4 sm:px-5 py-2 sm:py-2.5 rounded-sm text-xs sm:text-sm font-light text-white border border-white/40 hover:border-[#C5A880] hover:text-[#DFC39C] bg-black/30 backdrop-blur-md transition-all duration-300 flex items-center gap-2 shadow-lg"
           >
             <span>Request a Consultation</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </a>
         </header>
 
-        {/* Hero Central / Bottom Grid Composition */}
-        <div className="w-full max-w-7xl mx-auto px-6 sm:px-12 py-8 sm:py-12 flex-1 flex flex-col justify-between relative z-20">
+        {/* Hero Central / Bottom Composition */}
+        <div className="w-full max-w-7xl mx-auto px-6 sm:px-12 py-6 sm:py-8 flex-1 flex flex-col justify-between relative z-20">
           
           {/* Top-Right Editorial Value Statement */}
-          <div className="flex justify-end pt-4 sm:pt-0">
-            <p className="max-w-md text-xs sm:text-sm md:text-base font-light text-slate-200 leading-relaxed text-left sm:text-left backdrop-blur-[2px] p-2 sm:p-0">
+          <div className="flex justify-end pt-2 sm:pt-0">
+            <p className="max-w-md text-xs sm:text-sm md:text-base font-light text-slate-100 leading-relaxed text-right md:text-left drop-shadow-lg bg-black/25 md:bg-transparent p-2 rounded-md backdrop-blur-[2px]">
               Transforming complex legal challenges into clear strategies through experience, deep insight, and an unyielding commitment to achieving meaningful client outcomes.
             </p>
           </div>
 
           {/* Bottom Row: Massive Headline on Left + Floating Stats & Gold CTA on Right */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-end pt-12 sm:pt-20">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-end pt-10 sm:pt-16 pb-4">
             
             {/* Left: Main Editorial Headline */}
-            <div className="lg:col-span-7 space-y-4">
-              <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-normal text-white tracking-tight leading-[1.08] drop-shadow-2xl">
+            <div className="lg:col-span-7 space-y-3">
+              <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-normal text-white tracking-tight leading-[1.08] drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
                 Justice with <br />
                 Clarity in a <br />
                 Complex World
               </h1>
               
-              <p className="text-xs sm:text-sm text-[#C5A880] tracking-widest uppercase font-light pt-2">
+              <p className="text-xs sm:text-sm text-[#DFC39C] tracking-widest uppercase font-light drop-shadow">
                 Serving corporate & private clients since 2012
               </p>
             </div>
 
             {/* Right: Stats and Satin Gold CTA */}
-            <div className="lg:col-span-5 flex flex-col sm:flex-row lg:flex-col xl:flex-row items-start sm:items-end justify-between lg:justify-end gap-6 sm:gap-8">
+            <div className="lg:col-span-5 flex flex-wrap sm:flex-nowrap items-end justify-between lg:justify-end gap-6 sm:gap-8">
               
               {/* Stat 1 */}
               <div className="space-y-0.5">
-                <span className="font-sans text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight block">
+                <span className="font-sans text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight block drop-shadow-lg">
                   96%
                 </span>
-                <span className="text-xs sm:text-sm text-slate-300 font-light block">
+                <span className="text-xs sm:text-sm text-slate-200 font-light block drop-shadow">
                   Success Rate
                 </span>
               </div>
 
               {/* Stat 2 */}
               <div className="space-y-0.5">
-                <span className="font-sans text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight block">
+                <span className="font-sans text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight block drop-shadow-lg">
                   150+
                 </span>
-                <span className="text-xs sm:text-sm text-slate-300 font-light block">
+                <span className="text-xs sm:text-sm text-slate-200 font-light block drop-shadow">
                   Successful Cases
                 </span>
               </div>
@@ -157,7 +153,7 @@ export default function DemoServiciosProfesionalesPage() {
                   href={dynamicWaLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 rounded-sm font-medium text-xs sm:text-sm bg-gradient-to-r from-[#C5A880] via-[#DFC39C] to-[#C5A880] hover:from-[#d1b690] hover:to-[#DFC39C] text-slate-950 shadow-[0_10px_30px_rgba(197,168,128,0.3)] transition-all duration-300 transform hover:scale-105 active:scale-95"
+                  className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3.5 sm:py-4 rounded-sm font-medium text-xs sm:text-sm bg-gradient-to-r from-[#C5A880] via-[#DFC39C] to-[#C5A880] hover:from-[#d1b690] hover:to-[#DFC39C] text-slate-950 shadow-[0_10px_30px_rgba(0,0,0,0.5)] transition-all duration-300 transform hover:scale-105 active:scale-95 whitespace-nowrap"
                 >
                   <span className="font-semibold">Get Legal Guidance</span>
                   <ArrowRight className="w-4 h-4" />
@@ -172,8 +168,8 @@ export default function DemoServiciosProfesionalesPage() {
 
       </section>
 
-      {/* 🏛️ EDITORIAL PRACTICE AREAS (Sin cajas cuadradas, tipografía refinada) */}
-      <section id="practice-areas" className="py-24 px-6 sm:px-12 max-w-7xl mx-auto space-y-16">
+      {/* 🏛️ EDITORIAL PRACTICE AREAS */}
+      <section id="practice-areas" className="py-20 px-6 sm:px-12 max-w-7xl mx-auto space-y-12">
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-white/10 pb-8">
@@ -186,54 +182,49 @@ export default function DemoServiciosProfesionalesPage() {
             </h2>
           </div>
           <p className="text-xs sm:text-sm font-light text-slate-400 max-w-md leading-relaxed">
-            Delivering high-stakes legal solutions with precision, strategic rigor, and total discretion for leading companies and high-net-worth individuals.
+            Delivering high-stakes legal solutions with precision, strategic rigor, and total discretion for leading companies and private clients.
           </p>
         </div>
 
-        {/* Editorial Practice Rows (Clean Line Separators) */}
+        {/* Editorial Practice Rows */}
         <div className="space-y-0 divide-y divide-white/10">
           {[
             {
               num: "01",
               title: "Corporate & Commercial Law",
               desc: "Mergers & acquisitions, cross-border contract structuring, shareholder agreements, and strategic corporate governance.",
-              linkText: "Explore Corporate Practice"
             },
             {
               num: "02",
               title: "Tax Defense & Fiscal Litigation",
               desc: "Defending enterprises against unlawful audit determinations, SUNAT disputes, and designing fully compliant tax optimization strategies.",
-              linkText: "Explore Tax Defense"
             },
             {
               num: "03",
               title: "Commercial Arbitration & High-Stakes Litigation",
               desc: "Unwavering advocacy before arbitration tribunals and commercial courts to protect mission-critical business assets.",
-              linkText: "Explore Litigation"
             },
             {
               num: "04",
               title: "Intellectual Property & Brand Protection",
               desc: "Comprehensive trademark registration, patent litigation, and trade secret enforcement before INDECOPI and international bodies.",
-              linkText: "Explore IP Law"
             },
             {
               num: "05",
               title: "Asset Protection & Fiduciary Trusts",
-              desc: "Structuring bespoke private wealth trusts and generational succession frameworks to secure legacy and insulate from third-party liabilities.",
-              linkText: "Explore Wealth Structuring"
+              desc: "Structuring bespoke private wealth trusts and generational succession frameworks to secure legacy and insulate assets.",
             }
           ].map((area, idx) => (
             <div
               key={idx}
-              className="py-10 sm:py-12 grid grid-cols-1 md:grid-cols-12 gap-6 items-center group hover:bg-white/[0.01] transition-colors px-2 sm:px-4"
+              className="py-8 sm:py-10 grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-6 items-center group hover:bg-white/[0.02] transition-colors px-2 sm:px-4"
             >
               <div className="md:col-span-1 text-xs font-mono text-[#C5A880]">
                 {area.num}
               </div>
 
               <div className="md:col-span-4">
-                <h3 className="font-serif text-2xl sm:text-3xl font-normal text-white group-hover:text-[#DFC39C] transition-colors">
+                <h3 className="font-serif text-xl sm:text-2xl font-normal text-white group-hover:text-[#DFC39C] transition-colors">
                   {area.title}
                 </h3>
               </div>
@@ -262,15 +253,15 @@ export default function DemoServiciosProfesionalesPage() {
       </section>
 
       {/* 🏛️ PROVEN CASE OUTCOMES */}
-      <section id="case-studies" className="py-20 px-6 sm:px-12 max-w-7xl mx-auto">
-        <div className="p-8 sm:p-14 bg-gradient-to-b from-[#14100C] to-[#0A0806] border border-[#C5A880]/20 rounded-none space-y-10 relative overflow-hidden">
+      <section id="case-studies" className="py-16 px-6 sm:px-12 max-w-7xl mx-auto">
+        <div className="p-8 sm:p-12 bg-gradient-to-b from-[#14100C] to-[#0A0806] border border-[#C5A880]/20 space-y-8 relative overflow-hidden">
           
           <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 border-b border-white/10 pb-6">
             <div>
               <span className="text-[10px] font-mono text-[#C5A880] uppercase tracking-[0.2em] block">
                 NOTABLE VERDICTS & RESULTS
               </span>
-              <h3 className="font-serif text-2xl sm:text-4xl font-normal text-white">
+              <h3 className="font-serif text-2xl sm:text-3xl font-normal text-white">
                 Recent Case Outcomes
               </h3>
             </div>
@@ -279,26 +270,26 @@ export default function DemoServiciosProfesionalesPage() {
             </span>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12">
-            <div className="space-y-3">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="space-y-2">
               <span className="text-xs font-mono text-[#C5A880] block">Sector: Industrial Manufacturing</span>
-              <p className="font-serif text-3xl font-normal text-white">S/ 2,400,000</p>
+              <p className="font-serif text-2xl sm:text-3xl font-normal text-white">S/ 2,400,000</p>
               <p className="text-xs font-light text-slate-400 leading-relaxed">
                 Complete revocation of unlawful tax liabilities and penalties before the Fiscal Tribunal.
               </p>
             </div>
 
-            <div className="space-y-3">
+            <div className="space-y-2">
               <span className="text-xs font-mono text-[#C5A880] block">Sector: Commercial Real Estate</span>
-              <p className="font-serif text-3xl font-normal text-white">S/ 1,850,000</p>
+              <p className="font-serif text-2xl sm:text-3xl font-normal text-white">S/ 1,850,000</p>
               <p className="text-xs font-light text-slate-400 leading-relaxed">
                 Successful settlement and resolution of complex multi-party commercial breach of contract.
               </p>
             </div>
 
-            <div className="space-y-3">
+            <div className="space-y-2">
               <span className="text-xs font-mono text-[#C5A880] block">Sector: Private Wealth</span>
-              <p className="font-serif text-3xl font-normal text-white">100% Insulated</p>
+              <p className="font-serif text-2xl sm:text-3xl font-normal text-white">100% Insulated</p>
               <p className="text-xs font-light text-slate-400 leading-relaxed">
                 Establishment of multi-tier private trust shielding corporate real estate assets.
               </p>

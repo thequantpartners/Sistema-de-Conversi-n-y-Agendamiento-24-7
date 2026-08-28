@@ -10,7 +10,6 @@ import {
   Users, 
   Clock, 
   Award, 
-  CheckCircle2, 
   ArrowRight, 
   BookOpen, 
   Video, 
@@ -27,307 +26,222 @@ export default function DemoNegocioLocalPage() {
   const [selectedCourse, setSelectedCourse] = useState("meta_ads");
 
   const courseMessages: Record<string, string> = {
-    meta_ads: "Hola, vi su landing page y deseo solicitar el temario y asegurar mi cupo para Marketing Digital & Meta Ads.",
-    finanzas: "Hola, vi su landing page y deseo solicitar el temario para el Taller de Gestión Financiera de Pymes.",
-    ventas: "Hola, vi su landing page y deseo inscribirme en el Taller de Ventas Consultivas & Cierre B2B.",
+    meta_ads: "Hola Julian, vi su página y deseo solicitar el temario y asegurar mi cupo para el Taller de Marketing & Meta Ads Pro.",
+    finanzas: "Hola Julian, vi su página y deseo solicitar el temario para el Taller de Gestión Financiera para Pymes.",
+    ventas: "Hola Julian, vi su página y deseo inscribirme en el Taller de Ventas Consultivas & Cierre B2B.",
   };
 
   const dynamicWaLink = getWhatsAppLink(courseMessages[selectedCourse] || demoData.whatsAppMessage);
 
   return (
-    <div className="min-h-screen bg-[#080412] text-slate-100 font-sans pb-36 relative overflow-x-hidden selection:bg-purple-500 selection:text-white">
+    <div className="min-h-screen bg-[#080410] text-slate-100 font-sans pb-36 relative selection:bg-purple-500 selection:text-white">
       
-      {/* 🔮 Electric Violet Mesh & Neon Auras */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1200px] h-[650px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-600/20 via-pink-600/10 to-transparent blur-[160px] pointer-events-none -z-10" />
-      <div className="absolute top-[40%] right-[-10%] w-[600px] h-[600px] bg-pink-600/10 blur-[180px] pointer-events-none -z-10" />
-
-      {/* Demo Pill Bar */}
-      <div className="py-2.5 px-4 bg-white/[0.02] border-b border-white/[0.06] backdrop-blur-xl text-center text-xs flex items-center justify-center gap-2">
-        <span className="px-2.5 py-0.5 rounded-full bg-purple-400/15 text-purple-300 font-bold border border-purple-400/30 text-[10px]">
+      {/* Top Demo Banner */}
+      <div className="py-2 px-4 bg-black/90 border-b border-white/[0.08] backdrop-blur-xl text-center text-xs flex flex-wrap items-center justify-center gap-2 relative z-50">
+        <span className="px-2.5 py-0.5 rounded-full bg-purple-500/20 text-purple-300 font-bold border border-purple-500/40 text-[10px] uppercase tracking-wider">
           LANDING PAGE DEMO
         </span>
         <span className="text-slate-300">
-          Diseño para <strong>Academias, Cursos en Vivo, Talleres y Marcas de Formación</strong>
+          Diseño Editorial & Cinematográfico para <strong>Academias, Mentores Ejecutivos y Formación de Alto Nivel</strong>
         </span>
       </div>
 
-      {/* Floating Capsule Header */}
-      <header className="sticky top-4 z-40 max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between px-6 py-3.5 rounded-full bg-[#100720]/70 border border-white/[0.08] backdrop-blur-2xl shadow-[0_10px_40px_rgba(0,0,0,0.5)]">
-          <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-purple-500 via-pink-500 to-amber-300 flex items-center justify-center font-black text-white text-base shadow-[0_0_20px_rgba(168,85,247,0.3)]">
-              🚀
-            </div>
-            <div>
-              <span className="font-extrabold text-sm tracking-tight text-white block">
-                ACADEMIA LÍDER DIGITAL
-              </span>
-              <span className="text-[9px] font-mono text-purple-400 uppercase tracking-widest block font-semibold">
-                Formación Ejecutiva & Práctica
-              </span>
-            </div>
+      {/* 🏛️ CINEMATIC ACADEMY HERO SECTION */}
+      <section className="relative min-h-[85vh] lg:min-h-[90vh] flex flex-col justify-between overflow-hidden bg-[#080410]">
+        
+        {/* Ambient Dark Purple / Magenta Lighting */}
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-purple-900/30 via-[#120722] to-[#06030C]" />
+          <div className="absolute top-1/4 left-1/3 w-[500px] h-[500px] bg-pink-600/10 rounded-full blur-[140px] pointer-events-none" />
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-30" />
+        </div>
+
+        {/* Minimalist Editorial Navigation */}
+        <header className="w-full px-6 sm:px-12 py-5 sm:py-7 flex items-center justify-between relative z-20">
+          <div className="flex flex-col">
+            <span className="font-serif text-2xl sm:text-3xl font-medium tracking-tight text-white leading-none">
+              Julian Cole
+            </span>
+            <span className="text-[9px] uppercase tracking-[0.25em] text-purple-400 font-sans mt-1">
+              Executive Mentorship & Growth Cohorts
+            </span>
           </div>
 
-          <nav className="hidden lg:flex items-center gap-7 text-xs font-semibold uppercase tracking-wider text-slate-400">
-            <a href="#cursos" className="hover:text-purple-300 transition-colors">Talleres</a>
-            <a href="#inscripcion" className="hover:text-purple-300 transition-colors">Inscripción</a>
-            <a href="#comunidad" className="hover:text-purple-300 transition-colors">Comunidad</a>
+          <nav className="hidden md:flex items-center gap-8 text-xs sm:text-sm font-light text-slate-200 tracking-wide">
+            <a href="#talleres" className="hover:text-white transition-colors">Programs</a>
+            <a href="#metodologia" className="hover:text-white transition-colors">Methodology</a>
+            <a href="#alumni" className="hover:text-white transition-colors">Alumni</a>
+            <a href="#comunidad" className="hover:text-white transition-colors">Community</a>
           </nav>
 
           <a
             href={dynamicWaLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 sm:px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white shadow-[0_0_20px_rgba(168,85,247,0.3)] transition-all transform hover:scale-105"
+            className="px-4 sm:px-5 py-2 sm:py-2.5 rounded-sm text-xs sm:text-sm font-light text-white border border-white/40 hover:border-purple-400 hover:text-purple-300 bg-black/30 backdrop-blur-md transition-all duration-300 flex items-center gap-2 shadow-lg"
           >
-            Próximos Inicios
+            <span>Next Cohort Enrollment</span>
+            <ArrowRight className="w-3.5 h-3.5" />
           </a>
-        </div>
-      </header>
+        </header>
 
-      {/* Hero Section */}
-      <section className="pt-12 sm:pt-20 pb-16 px-4 sm:px-6 max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        {/* Hero Central / Bottom Grid Composition */}
+        <div className="w-full max-w-7xl mx-auto px-6 sm:px-12 py-6 sm:py-8 flex-1 flex flex-col justify-between relative z-20">
           
-          {/* Left Column */}
-          <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.03] border border-purple-500/30 backdrop-blur-xl text-purple-300 text-xs font-medium shadow-xl">
-              <Flame className="w-4 h-4 text-pink-400 shrink-0 animate-pulse" />
-              <span>Inicios Semanales • Grupos Reducidos de Máximo 15 Personas</span>
-            </div>
-
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1]">
-              Aprende Habilidades de Alto Impacto con{" "}
-              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-amber-300 bg-clip-text text-transparent drop-shadow-[0_0_35px_rgba(168,85,247,0.25)]">
-                Especialistas en Vivo.
-              </span>
-            </h1>
-
-            <p className="text-sm sm:text-lg text-slate-300 leading-relaxed max-w-xl mx-auto lg:mx-0">
-              Talleres prácticos aplicados a proyectos reales. Metodologías ágiles, retroalimentación personalizada y certificado oficial con código de validación.
+          {/* Top-Right Value Statement */}
+          <div className="flex justify-end pt-2 sm:pt-0">
+            <p className="max-w-md text-xs sm:text-sm md:text-base font-light text-slate-200 leading-relaxed text-right md:text-left drop-shadow-lg bg-black/25 md:bg-transparent p-2 rounded-md backdrop-blur-[2px]">
+              Mastering high-leverage business skills through live project cohorts, 1-on-1 feedback reviews, and real market implementation frameworks.
             </p>
-
-            {/* CTAs */}
-            <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-              <a
-                href={dynamicWaLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full font-bold text-sm sm:text-base bg-emerald-400 hover:bg-emerald-300 text-slate-950 shadow-[0_0_30px_rgba(16,185,129,0.35)] transition-all transform hover:scale-105"
-              >
-                <MessageCircle className="w-5 h-5 fill-slate-950" />
-                <span>Solicitar Temario por WhatsApp</span>
-              </a>
-
-              <a
-                href="#cursos"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full font-semibold text-xs sm:text-sm text-slate-300 hover:text-white bg-white/[0.03] hover:bg-white/[0.07] border border-white/10 backdrop-blur-xl transition"
-              >
-                <span>Explorar Talleres</span>
-                <ChevronRight className="w-4 h-4" />
-              </a>
-            </div>
-
-            {/* Trust Seals */}
-            <div className="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs text-slate-400 border-t border-white/[0.06]">
-              <div className="flex items-center gap-1.5 text-amber-400">
-                <div className="flex">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
-                  ))}
-                </div>
-                <span className="font-bold text-white ml-1">4.9 / 5.0</span>
-              </div>
-              <span>•</span>
-              <span>+2,100 Alumnos Graduados</span>
-              <span>•</span>
-              <span className="text-emerald-400 font-semibold">✓ Certificado Oficial</span>
-            </div>
           </div>
 
-          {/* Right Column: Floating Course Selector Pod */}
-          <div className="lg:col-span-5" id="inscripcion">
-            <div className="p-7 sm:p-9 rounded-[2.5rem] bg-gradient-to-b from-white/[0.06] to-white/[0.02] border border-white/[0.1] shadow-[0_30px_90px_rgba(0,0,0,0.6)] backdrop-blur-2xl space-y-6 relative overflow-hidden ring-1 ring-white/[0.05]">
-              <div className="absolute -top-10 -right-10 w-40 h-40 bg-purple-500/15 rounded-full blur-3xl pointer-events-none" />
-
-              <div className="flex items-center justify-between border-b border-white/[0.08] pb-4">
-                <div>
-                  <span className="text-[10px] font-bold text-purple-400 uppercase tracking-widest block">
-                    CUPOS LIMITADOS
-                  </span>
-                  <h3 className="text-lg font-bold text-white">
-                    Consulta Disponibilidad de Talleres
-                  </h3>
-                </div>
-                <div className="w-9 h-9 rounded-full bg-purple-400/10 border border-purple-400/30 flex items-center justify-center text-purple-400">
-                  <GraduationCap className="w-4 h-4" />
-                </div>
-              </div>
-
-              <div className="space-y-3">
-                <label className="text-xs font-semibold text-slate-300 block">
-                  1. Selecciona el taller de tu interés:
-                </label>
-                
-                <div className="space-y-2">
-                  {[
-                    { id: "meta_ads", label: "Marketing & Meta Ads Pro", badge: "4 Semanas" },
-                    { id: "finanzas", label: "Gestión Financiera para Pymes", badge: "3 Semanas" },
-                    { id: "ventas", label: "Ventas Consultivas & Cierre B2B", badge: "2 Semanas" },
-                  ].map((tab) => (
-                    <button
-                      key={tab.id}
-                      type="button"
-                      onClick={() => setSelectedCourse(tab.id)}
-                      className={`w-full p-3.5 rounded-2xl text-left text-xs font-medium transition-all flex items-center justify-between border ${
-                        selectedCourse === tab.id
-                          ? "bg-purple-600 text-white font-bold border-purple-400 shadow-[0_0_20px_rgba(168,85,247,0.4)] scale-102"
-                          : "bg-white/[0.02] text-slate-300 border-white/[0.06] hover:bg-white/[0.05]"
-                      }`}
-                    >
-                      <span>{tab.label}</span>
-                      <span className="text-[10px] px-2.5 py-0.5 rounded-full bg-purple-950/80 text-purple-300 border border-purple-500/30">
-                        {tab.badge}
-                      </span>
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/[0.06] space-y-2 text-xs">
-                <div className="flex items-center justify-between text-slate-400">
-                  <span>Modalidad de clases:</span>
-                  <span className="font-bold text-white">En Vivo vía Zoom</span>
-                </div>
-                <div className="flex items-center justify-between text-slate-400">
-                  <span>Acceso a grabaciones:</span>
-                  <span className="font-bold text-emerald-400">De por vida 24/7</span>
-                </div>
-              </div>
-
-              <a
-                href={dynamicWaLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full font-bold text-xs sm:text-sm bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white shadow-[0_0_25px_rgba(168,85,247,0.3)] transition-all text-center transform hover:scale-102"
-              >
-                <span>Solicitar Temario Completo por WhatsApp</span>
-                <ArrowRight className="w-4 h-4" />
-              </a>
-
-              <p className="text-[10px] text-center text-slate-400 flex items-center justify-center gap-1">
-                <ShieldCheck className="w-3 h-3 text-purple-400" />
-                <span>Garantía de satisfacción con devolución en 7 días.</span>
+          {/* Bottom Row: Headline on Left + Floating Stats & Purple CTA on Right */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-end pt-10 sm:pt-16 pb-4">
+            
+            {/* Left: Main Headline */}
+            <div className="lg:col-span-7 space-y-3">
+              <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-normal text-white tracking-tight leading-[1.08] drop-shadow-2xl">
+                Master High-Impact <br />
+                Business Skills with <br />
+                Relentless Execution
+              </h1>
+              
+              <p className="text-xs sm:text-sm text-purple-400 tracking-widest uppercase font-light">
+                Live Cohorts & Executive Training • Since 2018
               </p>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Floating Courses Showcase */}
-      <section id="cursos" className="py-16 px-4 sm:px-6 max-w-6xl mx-auto space-y-12">
-        <div className="text-center space-y-3 max-w-2xl mx-auto">
-          <span className="text-xs font-bold text-purple-400 uppercase tracking-widest">
-            METODOLOGÍA 100% PRÁCTICA
-          </span>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            Programas y Talleres
-          </h2>
-          <p className="text-xs sm:text-base text-slate-400">
-            Aprende construyendo soluciones reales para tu carrera o empresa.
-          </p>
-        </div>
-
-        {/* Dynamic Glass Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {[
-            {
-              icon: "📱",
-              title: "Marketing Digital & Meta Ads Pro",
-              desc: "Estrategias de anuncios en Facebook, Instagram y WhatsApp para generar prospectos todos los días.",
-              badge: "Más Vendido",
-              duration: "4 Semanas"
-            },
-            {
-              icon: "📈",
-              title: "Gestión Financiera para Pymes",
-              desc: "Flujo de caja, cálculo de precios rentables y ordenamiento tributario para evitar pérdidas.",
-              badge: "Pymes",
-              duration: "3 Semanas"
-            },
-            {
-              icon: "🤝",
-              title: "Ventas Consultivas & Cierre B2B",
-              desc: "Psicología de ventas para cerrar contratos de alto valor sin regalar descuentos innecesarios.",
-              badge: "Cierre Rápido",
-              duration: "2 Semanas"
-            },
-            {
-              icon: "🎓",
-              title: "Certificado Oficial con QR",
-              desc: "Diploma digital verificable para adjuntar a tu perfil de LinkedIn y respaldar tus conocimientos.",
-              badge: "Oficial",
-              duration: "Incluido"
-            },
-            {
-              icon: "👥",
-              title: "Comunidad Privada de Alumnos",
-              desc: "Acceso a grupo de networking en WhatsApp para resolver dudas y compartir oportunidades de negocio.",
-              badge: "Comunidad",
-              duration: "Acceso Vitalicio"
-            },
-            {
-              icon: "🎥",
-              title: "Campus Virtual 24/7",
-              desc: "Plataforma con todas las grabaciones en HD, plantillas descargables y guías paso a paso.",
-              badge: "Recursos",
-              duration: "Acceso Total"
-            }
-          ].map((item, idx) => (
-            <div
-              key={idx}
-              className="p-8 rounded-[2rem] bg-gradient-to-b from-white/[0.04] to-white/[0.01] border border-white/[0.08] hover:border-purple-500/40 backdrop-blur-xl transition-all duration-300 group hover:-translate-y-1 space-y-4 flex flex-col justify-between"
-            >
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <span className="text-3xl p-3 rounded-2xl bg-white/[0.04] border border-white/[0.08]">
-                    {item.icon}
-                  </span>
-                  <span className="text-[10px] font-bold px-3 py-1 rounded-full bg-white/[0.03] text-purple-300 border border-white/[0.06]">
-                    {item.badge}
-                  </span>
-                </div>
-
-                <h3 className="text-lg font-bold text-white group-hover:text-purple-300 transition-colors">
-                  {item.title}
-                </h3>
-
-                <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                  {item.desc}
-                </p>
+            {/* Right: Stats and Purple CTA */}
+            <div className="lg:col-span-5 flex flex-wrap sm:flex-nowrap items-end justify-between lg:justify-end gap-6 sm:gap-8">
+              
+              {/* Stat 1 */}
+              <div className="space-y-0.5">
+                <span className="font-sans text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight block drop-shadow-lg">
+                  94%
+                </span>
+                <span className="text-xs sm:text-sm text-slate-200 font-light block">
+                  Career ROI & Growth
+                </span>
               </div>
 
-              <div className="pt-4 border-t border-white/[0.06] flex items-center justify-between">
-                <span className="text-[11px] text-purple-400/90 font-medium">⏱️ {item.duration}</span>
+              {/* Stat 2 */}
+              <div className="space-y-0.5">
+                <span className="font-sans text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight block drop-shadow-lg">
+                  2,100+
+                </span>
+                <span className="text-xs sm:text-sm text-slate-200 font-light block">
+                  Alumni Certified
+                </span>
+              </div>
+
+              {/* Satin Purple Button */}
+              <div>
                 <a
                   href={dynamicWaLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs font-bold text-white hover:text-purple-300 flex items-center gap-1"
+                  className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3.5 sm:py-4 rounded-sm font-medium text-xs sm:text-sm bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500 hover:from-purple-400 hover:to-pink-400 text-white shadow-[0_10px_30px_rgba(168,85,247,0.35)] transition-all duration-300 transform hover:scale-105 active:scale-95 whitespace-nowrap"
                 >
-                  Inscribirme →
+                  <span className="font-semibold">Apply for Cohort</span>
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* 🏛️ EDITORIAL PROGRAMS */}
+      <section id="talleres" className="py-20 px-6 sm:px-12 max-w-7xl mx-auto space-y-12">
+        
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-white/10 pb-8">
+          <div className="space-y-2">
+            <span className="text-[11px] font-mono text-purple-400 uppercase tracking-[0.2em] block">
+              CURRICULUM & COHORTS
+            </span>
+            <h2 className="font-serif text-3xl sm:text-5xl font-normal text-white tracking-tight">
+              Executive Programs
+            </h2>
+          </div>
+          <p className="text-xs sm:text-sm font-light text-slate-400 max-w-md leading-relaxed">
+            Direct feedback, downloadable frameworks, and verifiable certification designed for immediate commercial traction.
+          </p>
+        </div>
+
+        <div className="space-y-0 divide-y divide-white/10">
+          {[
+            {
+              num: "01",
+              title: "Performance Marketing & Meta Ads Pro",
+              desc: "Engineering high-converting direct response acquisition funnels on Facebook, Instagram & WhatsApp with scientific ROAS optimization.",
+            },
+            {
+              num: "02",
+              title: "SME Financial Architecture & Cashflow Control",
+              desc: "Unit economics, operating margins, cash buffer formulas, and automated financial dashboards to scale profitably.",
+            },
+            {
+              num: "03",
+              title: "Consultative Selling & High-Ticket B2B Negotiation",
+              desc: "Diagnostic sales psychology, objection-neutralizing scripts, and pitching frameworks for closing substantial multi-month retainer contracts.",
+            },
+            {
+              num: "04",
+              title: "Verifiable Cryptographic LinkedIn Certification",
+              desc: "Digital verifiable credential with anti-tamper validation to substantiate your executive skills before clients and employers.",
+            },
+            {
+              num: "05",
+              title: "Private Lifetime Mastermind & Deal Room",
+              desc: "Exclusive peer network for co-founder matchmaking, active deal flow, client referrals, and continuous weekly office hours.",
+            }
+          ].map((item, idx) => (
+            <div
+              key={idx}
+              className="py-8 sm:py-10 grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-6 items-center group hover:bg-white/[0.02] transition-colors px-2 sm:px-4"
+            >
+              <div className="md:col-span-1 text-xs font-mono text-purple-400">
+                {item.num}
+              </div>
+
+              <div className="md:col-span-4">
+                <h3 className="font-serif text-xl sm:text-2xl font-normal text-white group-hover:text-purple-300 transition-colors">
+                  {item.title}
+                </h3>
+              </div>
+
+              <div className="md:col-span-5">
+                <p className="text-xs sm:text-sm font-light text-slate-400 leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+
+              <div className="md:col-span-2 flex justify-start md:justify-end">
+                <a
+                  href={dynamicWaLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-xs font-light text-purple-400 group-hover:text-white transition-colors"
+                >
+                  <span>Syllabus</span>
+                  <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
                 </a>
               </div>
             </div>
           ))}
         </div>
+
       </section>
 
       {/* Floating WhatsApp Widget */}
       <DemoFloatingWhatsApp
-        businessName="Academia Líder Digital"
-        badgeText="¿Quieres inscribirte o pedir el temario?"
-        defaultMessage="Hola, estuve viendo su landing page y deseo solicitar información de inscripción a los cursos."
+        businessName="Julian Cole Mentorship"
+        badgeText="¿Deseas el temario completo del próximo inicio?"
+        defaultMessage="Hola Julian, vi su página web y deseo postular al próximo grupo."
       />
 
       {/* Sticky Bottom Conversion Bar */}
