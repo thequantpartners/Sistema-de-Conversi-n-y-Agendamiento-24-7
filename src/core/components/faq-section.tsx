@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { ProjectConfig } from "@/core/types/project";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Sparkles } from "lucide-react";
 
 interface FAQSectionProps {
   config: ProjectConfig;
@@ -16,19 +16,22 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ config }) => {
   };
 
   return (
-    <section id="faq" className="py-20 border-b border-zinc-800/60 bg-zinc-900/30 optimize-render">
-      <div className="mx-auto max-w-3xl px-4 sm:px-6">
-        {/* Section Tag */}
-        <div className="mb-4 inline-flex items-center gap-2 font-mono text-xs text-indigo-400 tracking-wider uppercase">
-          <span className="h-1.5 w-1.5 rounded-full bg-indigo-500"></span>
-          <span>{config.faq.entryNumber}</span>
+    <section id="faq" className="py-24 relative overflow-hidden">
+      <div className="mx-auto max-w-3xl px-4 sm:px-6 space-y-12">
+        
+        {/* Section Header */}
+        <div className="text-center space-y-3 max-w-2xl mx-auto">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[11px] font-mono text-emerald-300 tracking-wider uppercase">
+            <span className="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+            <span>{config.faq.entryNumber}</span>
+          </div>
+
+          <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white">
+            {config.faq.title}
+          </h2>
         </div>
 
-        <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-white mb-10">
-          {config.faq.title}
-        </h2>
-
-        {/* FAQ Accordion */}
+        {/* FAQ Accordion (Glassmorphic) */}
         <div className="space-y-3">
           {config.faq.items.map((item, idx) => {
             const isOpen = openIndex === idx;
@@ -36,18 +39,18 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ config }) => {
             return (
               <div
                 key={idx}
-                className="overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-950 transition-colors"
+                className="overflow-hidden rounded-[2rem] border border-white/[0.08] bg-white/[0.02] backdrop-blur-2xl transition-all duration-300 shadow-md"
               >
                 <button
                   type="button"
                   onClick={() => toggleItem(idx)}
                   aria-expanded={isOpen}
-                  className="flex w-full items-center justify-between p-5 text-left text-sm sm:text-base font-semibold text-white hover:text-indigo-300 transition-colors"
+                  className="flex w-full items-center justify-between p-6 text-left text-sm sm:text-base font-bold text-white hover:text-emerald-300 transition-colors"
                 >
-                  <span className="pr-4">{item.question}</span>
+                  <span className="pr-4 leading-snug">{item.question}</span>
                   <div
-                    className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-zinc-900 border border-zinc-800 transition-transform duration-200 ${
-                      isOpen ? "rotate-180 text-indigo-400" : "text-zinc-300"
+                    className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/[0.04] border border-white/[0.08] transition-transform duration-300 ${
+                      isOpen ? "rotate-180 text-emerald-400 border-emerald-500/40 bg-emerald-500/10" : "text-slate-400"
                     }`}
                   >
                     <ChevronDown className="h-4 w-4" />
@@ -55,7 +58,7 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ config }) => {
                 </button>
 
                 {isOpen && (
-                  <div className="border-t border-zinc-800/80 px-5 pt-3 pb-5 text-xs sm:text-sm text-zinc-200 leading-relaxed bg-zinc-900/40">
+                  <div className="border-t border-white/[0.06] px-6 pt-4 pb-6 text-xs sm:text-sm text-slate-300 leading-relaxed font-light bg-white/[0.01]">
                     {item.answer}
                   </div>
                 )}
@@ -63,6 +66,7 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ config }) => {
             );
           })}
         </div>
+
       </div>
     </section>
   );

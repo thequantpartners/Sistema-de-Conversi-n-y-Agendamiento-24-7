@@ -1,62 +1,68 @@
+"use client";
+
 import React from "react";
+import Link from "next/link";
 import { ProjectConfig } from "@/core/types/project";
-import { ArrowRight, Star } from "lucide-react";
+import { ArrowRight, Star, Sparkles } from "lucide-react";
+import { getWhatsAppLink } from "@/core/data/portfolio-demos";
 
 interface HeaderProps {
   config: ProjectConfig;
 }
 
 export const Header: React.FC<HeaderProps> = ({ config }) => {
+  const waLink = getWhatsAppLink("Hola, quiero solicitar mi página web profesional por S/ 700.");
+
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-zinc-800/80 bg-zinc-950/90 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
+    <header className="sticky top-4 z-50 w-full max-w-5xl mx-auto px-4 sm:px-6">
+      <div className="flex items-center justify-between px-5 sm:px-7 py-3.5 rounded-full bg-slate-950/70 border border-white/[0.08] backdrop-blur-2xl shadow-[0_10px_40px_rgba(0,0,0,0.5)]">
+        
         {/* Brand Logo */}
-        <div className="flex items-center gap-3">
-          <div className="flex items-center text-lg font-bold tracking-tight text-white">
-            <span className="text-indigo-400 font-mono tracking-tighter">/</span>
-            <span className="text-white ml-1">{config.branding.logoText}</span>
+        <Link href="/" className="flex items-center gap-2.5 group">
+          <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-emerald-400 to-teal-400 flex items-center justify-center font-black text-slate-950 text-xs shadow-[0_0_15px_rgba(16,185,129,0.4)]">
+            Q
+          </div>
+          <div className="flex items-center text-sm font-extrabold tracking-tight text-white">
+            <span>{config.branding.logoText.toUpperCase()}</span>
             {config.branding.logoSubtext && (
-              <span className="text-zinc-300 ml-1 font-normal">
-                {config.branding.logoSubtext}
+              <span className="text-emerald-400 font-light ml-1">
+                {config.branding.logoSubtext.toUpperCase()}
               </span>
             )}
           </div>
-        </div>
+        </Link>
 
-        {/* Social Proof Counter */}
-        <div className="hidden items-center gap-2 rounded-full border border-zinc-800 bg-zinc-900/80 px-3.5 py-1 text-xs text-zinc-200 md:flex">
-          <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          <span className="font-semibold text-white">
-            {config.socialProof.verifiedMetric}
-          </span>{" "}
-          {config.socialProof.verifiedLabel}
-          <span className="text-zinc-500">·</span>
-          <div className="flex items-center text-amber-300">
-            <Star className="h-3 w-3 fill-amber-300 text-amber-300 mr-0.5" />
-            <span className="font-semibold">{config.socialProof.rating}</span>
-          </div>
-        </div>
+        {/* Center Nav Links */}
+        <nav className="hidden md:flex items-center gap-7 text-xs font-medium text-slate-300 tracking-wide">
+          <a href="#proceso" className="hover:text-emerald-400 transition-colors">Proceso</a>
+          <a href="#beneficios" className="hover:text-emerald-400 transition-colors">Beneficios</a>
+          <a href="#transparencia" className="hover:text-emerald-400 transition-colors">Garantía</a>
+          <Link href="/portfolio" className="text-emerald-400 hover:text-emerald-300 font-semibold flex items-center gap-1 transition-colors">
+            <span>✨ Portafolio</span>
+          </Link>
+          <a href="#faq" className="hover:text-emerald-400 transition-colors">Preguntas</a>
+        </nav>
 
-        {/* Navigation & Portfolio Link */}
-        <div className="flex items-center gap-4 sm:gap-6">
-          <a
+        {/* CTA Button */}
+        <div className="flex items-center gap-3">
+          <Link
             href="/portfolio"
-            className="text-xs sm:text-sm font-semibold text-zinc-300 hover:text-emerald-400 flex items-center gap-1.5 transition-colors"
+            className="md:hidden text-xs font-semibold text-emerald-400 hover:text-emerald-300"
           >
-            <span>👀</span>
-            <span>Ver Portafolio</span>
-          </a>
+            Demos
+          </Link>
 
-          {/* CTA Button */}
           <a
-            href="#agenda"
-            aria-label="Ir a sección de agendamiento de cita"
-            className="inline-flex items-center gap-1.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 px-3.5 sm:px-4 py-2 text-xs font-bold text-slate-950 shadow-sm transition-all active:scale-95 focus:outline-none focus:ring-2 focus:ring-emerald-400"
+            href={waLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 px-4 sm:px-5 py-2 rounded-full text-xs font-bold text-slate-950 bg-gradient-to-r from-emerald-400 to-teal-300 hover:from-emerald-300 hover:to-teal-200 shadow-[0_0_20px_rgba(16,185,129,0.3)] transition-all transform hover:scale-105 active:scale-95 whitespace-nowrap"
           >
-            <span>Cotizar Web</span>
-            <ArrowRight className="h-3.5 w-3.5" />
+            <span>Pedir Web (S/ 700)</span>
+            <ArrowRight className="w-3.5 h-3.5" />
           </a>
         </div>
+
       </div>
     </header>
   );
