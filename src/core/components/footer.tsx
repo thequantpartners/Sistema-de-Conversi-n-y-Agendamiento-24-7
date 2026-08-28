@@ -39,8 +39,15 @@ export const Footer: React.FC<FooterProps> = ({ config }) => {
             </span>
           </div>
 
-          {/* Legal Navigation Buttons */}
-          <div className="flex items-center gap-6 font-mono text-xs">
+          {/* Legal Navigation Buttons & Portfolio */}
+          <div className="flex items-center gap-4 sm:gap-6 font-mono text-xs">
+            <a
+              href="/portfolio"
+              className="text-emerald-400 hover:text-emerald-300 font-semibold transition-colors underline-offset-4 hover:underline"
+            >
+              Portafolio de Demos
+            </a>
+            <span className="text-zinc-600">·</span>
             <button
               type="button"
               onClick={() => setIsPrivacyOpen(true)}
