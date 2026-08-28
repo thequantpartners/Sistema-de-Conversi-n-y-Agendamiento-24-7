@@ -49,25 +49,30 @@ export default function DemoNegocioLocalPage() {
       {/* 🏛️ CINEMATIC ACADEMY HERO SECTION */}
       <section className="relative min-h-[85vh] lg:min-h-[90vh] flex flex-col justify-between overflow-hidden bg-[#080410]">
         
-        {/* Ambient Dark Purple / Magenta Lighting */}
+        {/* Real Photographic Background Layer */}
         <div className="absolute inset-0 z-0 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-purple-900/30 via-[#120722] to-[#06030C]" />
-          <div className="absolute top-1/4 left-1/3 w-[500px] h-[500px] bg-pink-600/10 rounded-full blur-[140px] pointer-events-none" />
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-30" />
+          <img
+            src="/images/academy-hero.png"
+            alt="Julian Cole - Executive Mentorship"
+            className="w-full h-full object-cover object-center filter contrast-[1.05]"
+          />
+          {/* Gentle cinematic vignette */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#080410] via-black/30 to-black/60 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/20 to-black/60 pointer-events-none" />
         </div>
 
         {/* Minimalist Editorial Navigation */}
         <header className="w-full px-6 sm:px-12 py-5 sm:py-7 flex items-center justify-between relative z-20">
           <div className="flex flex-col">
-            <span className="font-serif text-2xl sm:text-3xl font-medium tracking-tight text-white leading-none">
+            <span className="font-serif text-2xl sm:text-3xl font-medium tracking-tight text-white leading-none drop-shadow-md">
               Julian Cole
             </span>
-            <span className="text-[9px] uppercase tracking-[0.25em] text-purple-400 font-sans mt-1">
+            <span className="text-[9px] uppercase tracking-[0.25em] text-purple-400 font-sans mt-1 drop-shadow">
               Executive Mentorship & Growth Cohorts
             </span>
           </div>
 
-          <nav className="hidden md:flex items-center gap-8 text-xs sm:text-sm font-light text-slate-200 tracking-wide">
+          <nav className="hidden md:flex items-center gap-8 text-xs sm:text-sm font-light text-slate-200 tracking-wide drop-shadow">
             <a href="#talleres" className="hover:text-white transition-colors">Programs</a>
             <a href="#metodologia" className="hover:text-white transition-colors">Methodology</a>
             <a href="#alumni" className="hover:text-white transition-colors">Alumni</a>
@@ -90,7 +95,7 @@ export default function DemoNegocioLocalPage() {
           
           {/* Top-Right Value Statement */}
           <div className="flex justify-end pt-2 sm:pt-0">
-            <p className="max-w-md text-xs sm:text-sm md:text-base font-light text-slate-200 leading-relaxed text-right md:text-left drop-shadow-lg bg-black/25 md:bg-transparent p-2 rounded-md backdrop-blur-[2px]">
+            <p className="max-w-md text-xs sm:text-sm md:text-base font-light text-slate-100 leading-relaxed text-right md:text-left drop-shadow-lg bg-black/25 md:bg-transparent p-2 rounded-md backdrop-blur-[2px]">
               Mastering high-leverage business skills through live project cohorts, 1-on-1 feedback reviews, and real market implementation frameworks.
             </p>
           </div>
@@ -100,13 +105,13 @@ export default function DemoNegocioLocalPage() {
             
             {/* Left: Main Headline */}
             <div className="lg:col-span-7 space-y-3">
-              <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-normal text-white tracking-tight leading-[1.08] drop-shadow-2xl">
+              <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-normal text-white tracking-tight leading-[1.08] drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
                 Master High-Impact <br />
                 Business Skills with <br />
                 Relentless Execution
               </h1>
               
-              <p className="text-xs sm:text-sm text-purple-400 tracking-widest uppercase font-light">
+              <p className="text-xs sm:text-sm text-purple-400 tracking-widest uppercase font-light drop-shadow">
                 Live Cohorts & Executive Training • Since 2018
               </p>
             </div>
@@ -119,7 +124,7 @@ export default function DemoNegocioLocalPage() {
                 <span className="font-sans text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight block drop-shadow-lg">
                   94%
                 </span>
-                <span className="text-xs sm:text-sm text-slate-200 font-light block">
+                <span className="text-xs sm:text-sm text-slate-200 font-light block drop-shadow">
                   Career ROI & Growth
                 </span>
               </div>
@@ -129,7 +134,7 @@ export default function DemoNegocioLocalPage() {
                 <span className="font-sans text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight block drop-shadow-lg">
                   2,100+
                 </span>
-                <span className="text-xs sm:text-sm text-slate-200 font-light block">
+                <span className="text-xs sm:text-sm text-slate-200 font-light block drop-shadow">
                   Alumni Certified
                 </span>
               </div>

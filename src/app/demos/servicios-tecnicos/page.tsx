@@ -48,25 +48,30 @@ export default function DemoServiciosTecnicosPage() {
       {/* 🏛️ CINEMATIC ENGINEERING HERO SECTION */}
       <section className="relative min-h-[85vh] lg:min-h-[90vh] flex flex-col justify-between overflow-hidden bg-[#0A0703]">
         
-        {/* Ambient Industrial Lighting & Gradients */}
+        {/* Real Photographic Background Layer */}
         <div className="absolute inset-0 z-0 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-amber-900/30 via-[#140D04] to-[#0A0602]" />
-          <div className="absolute top-1/4 left-1/3 w-[500px] h-[500px] bg-orange-600/10 rounded-full blur-[140px] pointer-events-none" />
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-30" />
+          <img
+            src="/images/hvac-hero.png"
+            alt="Marcus Vance - HVAC Engineering"
+            className="w-full h-full object-cover object-center filter contrast-[1.05]"
+          />
+          {/* Gentle cinematic vignette */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0A0703] via-black/30 to-black/60 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/20 to-black/60 pointer-events-none" />
         </div>
 
         {/* Minimalist Editorial Navigation */}
         <header className="w-full px-6 sm:px-12 py-5 sm:py-7 flex items-center justify-between relative z-20">
           <div className="flex flex-col">
-            <span className="font-serif text-2xl sm:text-3xl font-medium tracking-tight text-white leading-none">
+            <span className="font-serif text-2xl sm:text-3xl font-medium tracking-tight text-white leading-none drop-shadow-md">
               Marcus Vance
             </span>
-            <span className="text-[9px] uppercase tracking-[0.25em] text-amber-400 font-sans mt-1">
+            <span className="text-[9px] uppercase tracking-[0.25em] text-amber-400 font-sans mt-1 drop-shadow">
               HVAC & Technical Systems Engineering
             </span>
           </div>
 
-          <nav className="hidden md:flex items-center gap-8 text-xs sm:text-sm font-light text-slate-200 tracking-wide">
+          <nav className="hidden md:flex items-center gap-8 text-xs sm:text-sm font-light text-slate-200 tracking-wide drop-shadow">
             <a href="#servicios" className="hover:text-white transition-colors">Services</a>
             <a href="#garantia" className="hover:text-white transition-colors">Warranty</a>
             <a href="#marcas" className="hover:text-white transition-colors">Brands</a>
@@ -89,7 +94,7 @@ export default function DemoServiciosTecnicosPage() {
           
           {/* Top-Right Value Statement */}
           <div className="flex justify-end pt-2 sm:pt-0">
-            <p className="max-w-md text-xs sm:text-sm md:text-base font-light text-slate-200 leading-relaxed text-right md:text-left drop-shadow-lg bg-black/25 md:bg-transparent p-2 rounded-md backdrop-blur-[2px]">
+            <p className="max-w-md text-xs sm:text-sm md:text-base font-light text-slate-100 leading-relaxed text-right md:text-left drop-shadow-lg bg-black/25 md:bg-transparent p-2 rounded-md backdrop-blur-[2px]">
               Deploying master-certified HVAC technicians with written 12-month warranties, guaranteed upfront quotes, and zero hidden dispatch fees.
             </p>
           </div>
@@ -99,13 +104,13 @@ export default function DemoServiciosTecnicosPage() {
             
             {/* Left: Main Headline */}
             <div className="lg:col-span-7 space-y-3">
-              <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-normal text-white tracking-tight leading-[1.08] drop-shadow-2xl">
+              <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-normal text-white tracking-tight leading-[1.08] drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
                 Precision Climate <br />
                 & Technical Solutions <br />
                 Under Pressure
               </h1>
               
-              <p className="text-xs sm:text-sm text-amber-400 tracking-widest uppercase font-light">
+              <p className="text-xs sm:text-sm text-amber-400 tracking-widest uppercase font-light drop-shadow">
                 Residential & Industrial Engineering • Since 2014
               </p>
             </div>
@@ -118,7 +123,7 @@ export default function DemoServiciosTecnicosPage() {
                 <span className="font-sans text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight block drop-shadow-lg">
                   45m
                 </span>
-                <span className="text-xs sm:text-sm text-slate-200 font-light block">
+                <span className="text-xs sm:text-sm text-slate-200 font-light block drop-shadow">
                   Avg Arrival SLA
                 </span>
               </div>
@@ -128,7 +133,7 @@ export default function DemoServiciosTecnicosPage() {
                 <span className="font-sans text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight block drop-shadow-lg">
                   4,500+
                 </span>
-                <span className="text-xs sm:text-sm text-slate-200 font-light block">
+                <span className="text-xs sm:text-sm text-slate-200 font-light block drop-shadow">
                   Units Serviced
                 </span>
               </div>
