@@ -18,7 +18,7 @@ export interface DemoNiche {
 }
 
 export const PORTFOLIO_PHONE_NUMBER = "51924464410";
-export const PROMO_PRICE = "S/ 700";
+export const PROMO_PRICE = "Desde S/ 700";
 export const REGULAR_PRICE = "S/ 1,200";
 
 export const DEMO_NICHES: DemoNiche[] = [
@@ -43,7 +43,7 @@ export const DEMO_NICHES: DemoNiche[] = [
       "Botón Directo a WhatsApp para Asesoría",
       "Testimonios y Respaldo Corporativo"
     ],
-    whatsAppMessage: "Hola, estuve viendo la demo de Servicios Profesionales / Consultoría y quiero este diseño por S/ 700 para mi negocio."
+    whatsAppMessage: "Hola, estuve viendo la demo de Servicios Profesionales / Consultoría y quiero este diseño desde S/ 700 para mi negocio."
   },
   {
     id: "salud-estetica",
@@ -66,7 +66,7 @@ export const DEMO_NICHES: DemoNiche[] = [
       "Botón de Agendamiento Directo por WhatsApp",
       "Ubicación y Horarios de Atención Claros"
     ],
-    whatsAppMessage: "Hola, estuve viendo la demo de Salud & Estética y quiero este diseño por S/ 700 para mi negocio."
+    whatsAppMessage: "Hola, estuve viendo la demo de Salud & Estética y quiero este diseño desde S/ 700 para mi negocio."
   },
   {
     id: "servicios-tecnicos",
@@ -89,7 +89,7 @@ export const DEMO_NICHES: DemoNiche[] = [
       "Galería de Trabajos Realizados",
       "Garantía de Servicio Visible"
     ],
-    whatsAppMessage: "Hola, estuve viendo la demo de Servicios Técnicos & Mantenimiento y quiero este diseño por S/ 700 para mi negocio."
+    whatsAppMessage: "Hola, estuve viendo la demo de Servicios Técnicos & Mantenimiento y quiero este diseño desde S/ 700 para mi negocio."
   },
   {
     id: "negocio-local",
@@ -112,7 +112,7 @@ export const DEMO_NICHES: DemoNiche[] = [
       "Botón de Inscripción Inmediata por WhatsApp",
       "Diseño 100% Mobile First"
     ],
-    whatsAppMessage: "Hola, estuve viendo la demo de Academias & Negocios Locales y quiero este diseño por S/ 700 para mi negocio."
+    whatsAppMessage: "Hola, estuve viendo la demo de Academias & Negocios Locales y quiero este diseño desde S/ 700 para mi negocio."
   }
 ];
 

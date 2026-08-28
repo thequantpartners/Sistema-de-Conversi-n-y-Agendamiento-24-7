@@ -18,12 +18,12 @@ export const quantPartnersConfig: ProjectConfig = {
     reviewCount: "96 evaluaciones verificadas",
   },
   hero: {
-    badge: "OFERTA ESPECIAL: S/ 700 PAGO ÚNICO (PRECIO REGULAR S/ 1,200)",
+    badge: "OFERTA ESPECIAL: DESDE S/ 700 PAGO ÚNICO (PRECIO REGULAR S/ 1,200)",
     title: "Tu Página Web Profesional Lista en 5 Días para Atraer Clientes Reales.",
     subtitle: "Diseñamos tu sitio web moderno, ultra-rápido y 100% adaptable a teléfonos celulares con botón directo a WhatsApp. Sin mensualidades obligatorias, sin procesos lentos y 100% de tu propiedad.",
     callout: "entrega en 5 días · botón directo a whatsapp · 100% de tu propiedad · sin mensualidades de permanencia",
     honestLede: "Un negocio sin página web oficial pierde confianza frente a sus clientes y le regala ventas a la competencia. Diseñamos tu web desde cero, optimizada para que cargue en menos de 2 segundos, transmita máxima autoridad y guíe a tus visitantes a escribirte directamente por WhatsApp.",
-    ctaPrimary: "Solicitar mi Página Web por S/ 700",
+    ctaPrimary: "Solicitar mi Página Web (Desde S/ 700)",
     ctaSecondaryLink: "/portfolio",
     ctaSecondaryText: "Explorar Demos en Vivo 👀",
   },
@@ -48,7 +48,7 @@ export const quantPartnersConfig: ProjectConfig = {
         description: "Publicamos tu web en tu propio dominio y hosting. Te entregamos todas las contraseñas y accesos de administración sin contratos ni cobros mensuales ocultos.",
       },
     ],
-    bridgeText: "Revisa todo lo que incluye tu inversión de S/ 700 ↓",
+    bridgeText: "Revisa todo lo que incluye tu inversión desde S/ 700 ↓",
   },
   mathComparison: {
     entryNumber: "02 · BENEFICIOS Y VALOR REAL",
@@ -61,7 +61,7 @@ export const quantPartnersConfig: ProjectConfig = {
         tag: "Rapidez garantizada",
       },
       {
-        value: "S/ 700",
+        value: "Desde S/ 700",
         label: "tarifa plana en pago único con todo incluido (precio regular S/ 1,200).",
         tag: "Ahorro directo",
       },
@@ -113,7 +113,7 @@ export const quantPartnersConfig: ProjectConfig = {
   qualification: {
     entryNumber: "04 · COTIZACIÓN Y RESERVA",
     title: "Solicita tu Página Web Profesional",
-    subtitle: "Completa estos datos para coordinar el inicio de tu web y asegurar la tarifa promocional de S/ 700.",
+    subtitle: "Completa estos datos para coordinar el inicio de tu web y asegurar la tarifa promocional desde S/ 700.",
     questions: [
       {
         id: "business_type",
@@ -182,7 +182,7 @@ export const quantPartnersConfig: ProjectConfig = {
           {
             id: "inmediato",
             label: "De inmediato (esta misma semana / 5 días)",
-            description: "Quiero aprovechar la promoción de S/ 700 y lanzarla cuanto antes.",
+            description: "Quiero aprovechar la promoción desde S/ 700 y lanzarla cuanto antes.",
             qualifies: true,
             badge: "Prioridad Alta",
           },
@@ -224,7 +224,7 @@ export const quantPartnersConfig: ProjectConfig = {
     ],
     disqualifiedScreen: {
       title: "¡Gracias por responder! 🙌",
-      description: "Podemos iniciar el desarrollo de tu página web profesional en cualquier momento por la tarifa especial de S/ 700. Escríbenos directamente por WhatsApp para coordinar tu proyecto.",
+      description: "Podemos iniciar el desarrollo de tu página web profesional en cualquier momento por la tarifa especial desde S/ 700. Escríbenos directamente por WhatsApp para coordinar tu proyecto.",
       resourceCtaText: "Hablar por WhatsApp (+51 924 464 410)",
       whatsappCtaText: "Chatear por WhatsApp (+51 924 464 410)",
     },
@@ -234,12 +234,12 @@ export const quantPartnersConfig: ProjectConfig = {
     title: "Preguntas Frecuentes:",
     items: [
       {
-        question: "¿Qué incluye exactamente la oferta de S/ 700?",
+        question: "¿Qué incluye exactamente la oferta desde S/ 700?",
         answer: "Incluye el diseño completo de tu página web profesional (secciones de inicio, servicios, nosotros, testimonios y contacto), adaptación 100% para teléfonos celulares, botón flotante de WhatsApp, vinculación a tu propio dominio y hosting, y entrega de accesos totales de administración.",
       },
       {
         question: "¿Tengo que pagar mensualidades obligatorias de mantenimiento?",
-        answer: "No. Es un pago único de S/ 700. No cobramos mensualidades forzosas ni te atamos con contratos. La página web y todos sus archivos te pertenecen al 100%.",
+        answer: "No. Es un pago único desde S/ 700 según el alcance del proyecto. No cobramos mensualidades forzosas ni te atamos con contratos. La página web y todos sus archivos te pertenecen al 100%.",
       },
       {
         question: "¿En cuánto tiempo entregan la página web?",
